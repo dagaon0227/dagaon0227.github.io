@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="ko" translate="no" class="notranslate">
+<head>
+<meta charset="utf-8">
+<script>window.API_ORIGIN=/(^|\.)workers\.dev$|^localhost$|^127\.|^192\.0\.2\./.test(location.hostname)?"":"https://dagaon-group.dagaon0227.workers.dev";</script>
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>다가온 그룹 | Brand Space Design Group</title>
+<meta name="description" content="인테리어 디자인·설계(DDC), 가구 디자인·납품(DDF), 디스플레이(DDP). 공간의 첫 장부터 마지막 장까지 하나의 기준으로 완성하는 Brand Space Design Group, 다가온 그룹">
+<meta name="theme-color" content="#121211">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DAGAON GROUP">
+<meta property="og:title" content="다가온 그룹 | Brand Space Design Group">
+<meta property="og:description" content="인테리어 디자인·설계, 가구, 디스플레이를 한 회사에서. 공간의 첫 장부터 마지막 장까지.">
+<meta property="og:image" content="https://dagaongroup.com/book/og.jpg">
+<meta property="og:url" content="https://dagaongroup.com/">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<link rel="preload" as="image" href="img/v12/h1.webp" media="(min-width:761px)">
+<link rel="preload" as="image" href="img/v12/h1_m.webp" media="(max-width:760px)">
+<script>try{var _q=new URLSearchParams(location.search).get('lang'),_l=(_q==='en'||_q==='ko')?_q:(localStorage.getItem('dg_lang')||'ko');if(_l==='en'){document.documentElement.setAttribute('data-lang-pending','');document.documentElement.lang='en';}}catch(e){}</script>
+<style>
+/* 레이아웃: 사진이 화면을 채우고, 얇고 큰 영문 단어가 화면 모서리에 흩어지는 갤러리형 구성 + 하단 캡슐 메뉴 */
+:root{
+  --bg:#E7E6E1;--bg2:#DDDBD5;--paper:#F4F3EF;--ink:#121211;--mute:#6C6B66;--line:rgba(18,18,17,.15);--dark:#121211;--bronze:#8B6A4E;
+  --fd:'Inter Tight','Helvetica Neue',Arial,sans-serif;--fk:'Noto Sans KR',system-ui,-apple-system,sans-serif;
+  --gx:max(20px,3.2vw);--ease:cubic-bezier(.19,1,.22,1)
+}
+*{box-sizing:border-box}
+html{background:var(--bg);-webkit-text-size-adjust:100%;scroll-behavior:auto;touch-action:manipulation;overscroll-behavior-y:none}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--fk);font-size:15.5px;line-height:1.72;letter-spacing:-.012em;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;word-break:keep-all}
+img{display:block;max-width:100%;-webkit-touch-callout:none;-webkit-user-drag:none;user-select:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+.lab{font-family:var(--fd);font-weight:500;font-size:11.5px;line-height:1.4;letter-spacing:.09em;text-transform:uppercase}
+.thin{font-family:var(--fd);font-weight:300;letter-spacing:-.045em;line-height:.92}
+.wrap{padding-left:var(--gx);padding-right:var(--gx)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+
+/* ---------- top bar ---------- */
+.top{position:fixed;left:0;right:0;top:0;z-index:50;display:flex;justify-content:space-between;align-items:flex-start;padding:calc(18px + env(safe-area-inset-top,0px)) var(--gx) 0;color:#fff;pointer-events:none;transition:color .35s}
+.top.ink{color:var(--ink)}
+.top.ink .logo img{filter:brightness(0)}
+.top .logo img{transition:filter .35s}
+.top a,.top button{pointer-events:auto}
+.top .logo{display:flex;align-items:center;gap:12px}
+.top .logo img{height:34px;width:auto}
+.top .logo span{font-family:var(--fd);font-weight:500;font-size:12px;letter-spacing:.2em}
+.top .meta{display:flex;gap:28px;text-align:right}
+.top .meta a{border-bottom:1px solid currentColor;padding-bottom:1px}
+
+/* ---------- 한국어 / English 전환 ---------- */
+html[data-lang-pending] body{opacity:0;animation:lgshow 0s 1.5s forwards}@keyframes lgshow{to{opacity:1}}
+.top .meta{margin-left:auto}
+.lang{display:flex;align-items:center;gap:16px;margin-left:40px;pointer-events:auto;font-family:var(--fd);font-weight:500;font-size:21px;letter-spacing:.08em;line-height:1.3}
+.lang [data-lang]{display:block;cursor:pointer;letter-spacing:normal;-webkit-tap-highlight-color:transparent;opacity:.45;padding:4px 2px 3px;border-bottom:1.5px solid transparent;transition:opacity .25s,border-color .25s}
+.lang [data-lang]:hover{opacity:.85}
+.lang [data-lang][aria-current="true"]{opacity:1;border-bottom-color:currentColor}
+.lang i{display:block;width:1px;height:19px;background:currentColor;opacity:.35}
+.mpanel .mh .lang{margin-left:0;color:var(--paper);font-size:19px;gap:14px}
+@media (max-width:760px){.lang{font-size:19px;gap:14px}}
+html[lang="en"] body{font-family:'Inter Tight',var(--fk);letter-spacing:-.006em}
+html[lang="en"] .mpanel li .k{display:none}
+/* ---------- capsule menu ---------- */
+.cap{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:2px;height:48px;padding:0 6px;border-radius:999px;background:rgba(18,18,17,.9);color:var(--paper);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .5s var(--ease),opacity .4s}
+.cap .ci{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
+.cap .ci:hover{background:rgba(244,243,239,.12)}
+.cap .ci svg{width:17px;height:17px}
+.cap .cm{height:36px;padding:0 22px;border-radius:99px;font-family:var(--fd);font-weight:500;font-size:12px;letter-spacing:.18em}
+.cap .cm:hover{background:rgba(244,243,239,.1)}
+.cap .ci img{width:17px;filter:invert(0)}
+.cap.hide{transform:translate(-50%,140%);opacity:0}
+.mpanel{position:fixed;left:50%;bottom:calc(78px + env(safe-area-inset-bottom,0px));z-index:61;width:min(380px,calc(100vw - 32px));transform:translateX(-50%) translateY(12px) scale(.96);transform-origin:50% 100%;opacity:0;visibility:hidden;background:rgba(18,18,17,.96);color:var(--paper);border-radius:24px;padding:22px 22px 18px;transition:transform .45s var(--ease),opacity .3s,visibility 0s .45s;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.mpanel.on{opacity:1;visibility:visible;transform:translateX(-50%);transition:transform .55s var(--ease),opacity .3s,visibility 0s}
+.mpanel .mh{display:flex;justify-content:space-between;color:rgba(244,243,239,.5);margin-bottom:10px}
+.mpanel ol{list-style:none;margin:0;padding:0}
+.mpanel li a{display:grid;grid-template-columns:34px 1fr auto;align-items:baseline;padding:9px 0;border-top:1px solid rgba(244,243,239,.1)}
+.mpanel li a .n{font-family:var(--fd);font-size:11px;letter-spacing:.08em;color:rgba(244,243,239,.45)}
+.mpanel li a .t{font-family:var(--fd);font-weight:300;font-size:26px;letter-spacing:-.035em;line-height:1.15}
+.mpanel li a .k{font-size:12.5px;color:rgba(244,243,239,.55)}
+.mpanel li a:hover .t{color:var(--bg2)}
+.mpanel .mf{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.mpanel .mf a{height:44px;border-radius:99px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13.5px;border:1px solid rgba(244,243,239,.22)}
+.mpanel .mf a.pri{background:var(--paper);color:var(--ink);border-color:var(--paper);font-weight:500}
+.mpanel .mf svg{width:15px;height:15px}
+.scrim{position:fixed;inset:0;z-index:55;background:rgba(18,18,17,.25);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+.scrim.on{opacity:1;visibility:visible;transition:opacity .3s,visibility 0s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:#1a1918;color:#fff}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.4s ease,visibility 0s 1.4s}
+.slide.on{opacity:1;visibility:visible;z-index:2;transition:opacity 1.4s ease,visibility 0s}
+.slide .bg{position:absolute;inset:0;will-change:transform}
+.slide .bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.1);transition:transform 8s cubic-bezier(.25,.6,.3,1)}
+.slide.on .bg img{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0) 58%,rgba(0,0,0,.38) 100%);pointer-events:none}
+.w{position:absolute;z-index:3;font-family:var(--fd);font-weight:300;font-size:clamp(58px,10.6vw,188px);line-height:.95;letter-spacing:-.055em;overflow:hidden;padding:0 .04em .1em 0;white-space:nowrap}
+.w>span{display:block;transform:translateY(108%);transition:transform 1.25s var(--ease)}
+.slide.on .w>span{transform:none;transition-delay:calc(.35s + var(--d,0s))}
+.slide.out .w>span{transform:translateY(-108%);transition:transform .8s cubic-bezier(.7,0,.84,0);transition-delay:var(--d,0s)}
+.A .w1,.B .w2{left:var(--gx)}
+.A .w2,.B .w1,.B .w3{right:var(--gx)}
+.A .w3{left:var(--gx)}
+.w1{top:14%}.w2{top:43%}.w3{bottom:12%}
+.sd{position:absolute;z-index:3;bottom:calc(12% + 14px);max-width:290px;font-size:13.5px;line-height:1.65;color:rgba(255,255,255,.9);text-shadow:0 1px 14px rgba(0,0,0,.45);opacity:0;transform:translateY(10px);transition:opacity .9s,transform .9s var(--ease)}
+.A .sd{right:var(--gx);text-align:left}
+.B .sd{left:var(--gx)}
+.slide.on .sd{opacity:1;transform:none;transition-delay:.9s}
+.sd b{display:block;font-family:var(--fd);font-weight:500;font-size:11px;letter-spacing:.12em;margin-bottom:6px;color:#fff}
+.hcount{position:absolute;z-index:4;right:var(--gx);top:calc(76px + env(safe-area-inset-top,0px));display:flex;align-items:center;gap:12px;color:#fff}
+.hcount .bar{width:90px;height:1px;background:rgba(255,255,255,.3);overflow:hidden}
+.hcount .bar i{display:block;height:100%;background:#fff;transform-origin:0 50%;transform:scaleX(0)}
+.hcount .bar i.run{transform:scaleX(1);transition:transform var(--dur,6s) linear}
+.hero .tap{position:absolute;inset:0;z-index:3}
+.h-stick{position:relative;height:100vh;height:100svh;overflow:hidden}
+.hero.is3d{height:900vh;overflow:visible;background:var(--dark)}
+.hero.is3d .h-stick{position:sticky;top:0;height:100vh;height:100lvh;background:var(--dark)}
+.h-still{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;transition:opacity .5s}
+.hero.is3d .h-still{display:block}
+.hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0;display:block;pointer-events:none;background:transparent}
+.hv.on{opacity:1}
+.grain{display:none;position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 58%,rgba(0,0,0,.34) 100%),radial-gradient(ellipse at 50% 46%,rgba(0,0,0,0) 55%,rgba(10,10,9,.25) 100%)}
+.grain::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px;opacity:.14;mix-blend-mode:overlay}
+.hero.is3d .grain{display:block}
+.hero.is3d .slide .bg,.hero.is3d .slide::after{display:none}
+.hero .w,.hero .sd,.hero .hcount,.hero .hint{transition:color .6s,opacity .6s}
+.hero.ink .w,.hero.ink .hcount{color:var(--ink)}
+.hero.ink .sd{color:#33312e;text-shadow:none}
+.hero.ink .sd b{color:var(--ink)}
+.hero.ink .hcount .bar{background:rgba(18,18,17,.22)}
+.hero.ink .hcount .bar i{background:var(--ink)}
+.hcount .bar i.prog{transition:none}
+.hint{position:absolute;z-index:4;right:var(--gx);bottom:calc(30px + env(safe-area-inset-bottom,0px));display:none;align-items:center;gap:10px;color:#fff}
+.hero.is3d .hint{display:flex}
+.hero.ink .hint{color:var(--ink)}
+.hint i{display:block;width:1px;height:34px;background:currentColor;transform-origin:50% 0;animation:hintl 1.8s var(--ease) infinite}
+@keyframes hintl{0%{transform:scaleY(0)}50%{transform:scaleY(1);transform-origin:50% 0}51%{transform-origin:50% 100%}100%{transform:scaleY(0);transform-origin:50% 100%}}
+
+/* ---------- stats ---------- */
+.st{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;color:#fff;background:#1a1918}
+.st .bg{position:absolute;inset:-8% 0;will-change:transform}
+.st .bg img{width:100%;height:100%;object-fit:cover}
+.st::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.05) 40%,rgba(0,0,0,.45));pointer-events:none}
+.glass{position:absolute;z-index:2;left:var(--gx);top:calc(96px + env(safe-area-inset-top,0px));width:min(300px,70vw);padding:16px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.glass p{margin:8px 0 0;font-size:13px;line-height:1.6;color:rgba(255,255,255,.85)}
+.spark{position:absolute;z-index:2;left:50%;top:48%;width:34px;height:34px;margin:-17px 0 0 -17px}
+.num{position:absolute;z-index:2;bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+.num.l{left:var(--gx)}.num.r{right:var(--gx);text-align:right}
+.num b{display:block;font-family:var(--fd);font-weight:300;font-size:clamp(84px,12vw,210px);line-height:.82;letter-spacing:-.06em}
+.num span{display:block;margin-top:14px}
+
+/* ---------- expand ---------- */
+.xp{position:relative;height:260vh;background:var(--bg)}
+.xp-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+.xp-head{position:absolute;z-index:3;left:var(--gx);right:var(--gx);top:calc(96px + env(safe-area-inset-top,0px));display:flex;justify-content:space-between;gap:24px;align-items:flex-start;color:var(--ink);transition:color .3s}
+.xp-head .dot::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:10px;vertical-align:middle}
+.xp-head p{margin:0;font-size:13px;line-height:1.6;text-align:right;color:inherit;opacity:.8}
+.xp-m{position:absolute;inset:0;clip-path:inset(30% 28% 22% 28%);will-change:clip-path}
+.xp-m img{width:100%;height:100%;object-fit:cover;transform:scale(1.25);will-change:transform}
+.xp-m::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.22)}
+.xp-h{position:absolute;z-index:3;left:var(--gx);top:50%;transform:translateY(-50%);color:#fff;max-width:min(760px,90vw)}
+.xp-h h2{margin:0;font-family:var(--fd);font-weight:400;font-size:clamp(24px,2.8vw,46px);line-height:1.08;letter-spacing:-.03em;text-transform:uppercase}
+.xp-h p{margin:14px 0 0;font-size:14px;color:rgba(255,255,255,.85)}
+
+/* ---------- about (word reveal) ---------- */
+.ab{padding:20vh var(--gx) 18vh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:40px}
+.ab .side{display:flex;flex-direction:column;gap:10px;color:var(--mute)}
+.reveal{margin:0;font-weight:300;font-size:clamp(25px,3.15vw,52px);line-height:1.38;letter-spacing:-.04em;max-width:22em}
+.reveal .rw{opacity:.16;transition:opacity .25s linear}
+.ab .foot{grid-column:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:6vh;border-top:1px solid var(--line);padding-top:18px}
+.ab .foot b{display:block;font-family:var(--fd);font-weight:300;font-size:clamp(34px,3.6vw,56px);letter-spacing:-.05em;line-height:1}
+.ab .foot span{display:block;margin-top:8px;font-size:13px;color:var(--mute)}
+
+/* ---------- divisions ---------- */
+.dv{padding:8vh 0 14vh}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:0 var(--gx) 5vh}
+.sh h2{margin:0;font-family:var(--fd);font-weight:300;font-size:clamp(46px,7vw,124px);line-height:.92;letter-spacing:-.055em}
+.sh h2 sup{font-size:.22em;letter-spacing:0;vertical-align:top;margin-left:.2em;color:var(--mute)}
+.sh p{margin:0;max-width:340px;font-size:14px;color:var(--mute)}
+.dvr{display:grid;grid-template-columns:90px minmax(0,1fr) minmax(0,380px);gap:24px;align-items:start;padding:30px var(--gx) 34px;border-top:1px solid var(--line);cursor:pointer;transition:background .3s}
+.dvr:last-child{border-bottom:1px solid var(--line)}
+.dvr:hover{background:var(--bg2)}
+.dvr .n{padding-top:12px;color:var(--mute)}
+.dvr h3{margin:0;font-family:var(--fd);font-weight:300;font-size:clamp(44px,6.4vw,112px);line-height:.95;letter-spacing:-.055em;transition:transform .6s var(--ease)}
+.dvr:hover h3{transform:translateX(14px)}
+.dvr .tx{padding-top:10px}
+.dvr .tx .c{display:flex;justify-content:space-between;margin-bottom:10px}
+.dvr .tx p{margin:0 0 14px;font-size:14.5px;color:#3d3c39}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:99px;color:#4a4945}
+.dvr .go{display:inline-block;margin-top:16px;font-size:13px;border-bottom:1px solid currentColor}
+.dvr .mi{display:none}
+.flimg{position:fixed;left:0;top:0;z-index:40;width:340px;aspect-ratio:4/3;pointer-events:none;overflow:hidden;opacity:0;transform:translate(-50%,-50%) scale(.85);transition:opacity .35s,transform .5s var(--ease)}
+.flimg.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.flimg img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- works ---------- */
+.wk{padding:10vh 0 16vh}
+.wgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--gx);row-gap:9vh;padding:0 var(--gx)}
+.wi{display:block;text-align:left;cursor:pointer}
+.wi .ph{position:relative;overflow:hidden;background:var(--bg2)}
+.wi .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),opacity .6s}
+.wi:hover .ph img{transform:scale(1.04)}
+.wi .cp{display:flex;justify-content:space-between;gap:12px;margin-top:12px;align-items:baseline}
+.wi .cp b{font-weight:500;font-size:15px;letter-spacing:-.02em}
+.wi .cp span{color:var(--mute)}
+.wi:nth-child(1){grid-column:1/9}.wi:nth-child(1) .ph{aspect-ratio:16/10}
+.wi:nth-child(2){grid-column:9/13;margin-top:16vh}.wi:nth-child(2) .ph{aspect-ratio:3/4}
+.wi:nth-child(3){grid-column:2/7}.wi:nth-child(3) .ph{aspect-ratio:4/5}
+.wi:nth-child(4){grid-column:7/13;margin-top:22vh}.wi:nth-child(4) .ph{aspect-ratio:16/11}
+.wi:nth-child(5){grid-column:1/8}.wi:nth-child(5) .ph{aspect-ratio:16/10}
+.wi:nth-child(6){grid-column:8/13;margin-top:10vh}.wi:nth-child(6) .ph{aspect-ratio:4/5}
+.wmore{display:flex;justify-content:center;margin-top:12vh}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;border-radius:99px;border:1px solid var(--ink);font-size:14.5px;transition:background .25s,color .25s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.fill{background:var(--ink);color:var(--paper)}
+.btn.fill:hover{background:#2b2a28}
+.rv .ph{clip-path:inset(12% 0 0 0);transition:clip-path 1.3s var(--ease)}
+.rv .ph img{transform:scale(1.15)}
+.rv.in .ph{clip-path:inset(0 0 0 0)}
+.rv.in .ph img{transform:scale(1)}
+
+/* ---------- process ---------- */
+.pr{padding:12vh 0 14vh;background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:0 var(--gx);list-style:none;margin:0}
+.steps li{border-top:1px solid var(--ink);padding:18px 18px 0 0}
+.steps li+li{padding-left:18px;border-left:1px solid var(--line)}
+.steps .n{display:flex;justify-content:space-between;color:var(--mute)}
+.steps h3{margin:44px 0 2px;font-size:19px;font-weight:500;letter-spacing:-.03em}
+.steps em{display:block;font-style:normal;font-family:var(--fd);font-weight:300;font-size:15px;color:var(--mute);margin-bottom:12px}
+.steps p{margin:0;font-size:13.5px;line-height:1.65;color:#4a4945}
+.pr .end{padding:8vh var(--gx) 0;font-weight:300;font-size:clamp(24px,2.8vw,42px);letter-spacing:-.04em;line-height:1.3}
+
+/* ---------- ceo ---------- */
+.ceo{padding:16vh var(--gx);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr);gap:5vw;align-items:start}
+.ceo .ph{aspect-ratio:1/1;overflow:hidden;max-width:300px}
+.ceo .ph img{width:100%;height:100%;object-fit:cover}
+.ceo .q{font-family:var(--fd);font-weight:200;font-size:120px;line-height:.6;height:56px;color:var(--ink)}
+.ceo .reveal{font-size:clamp(28px,3.5vw,58px);max-width:18em}
+.ceo .body{margin:4vh 0 0;max-width:620px;font-size:15px;color:#3d3c39}
+.ceo .sg{display:flex;gap:16px;align-items:baseline;margin-top:28px;padding-top:18px;border-top:1px solid var(--line);max-width:620px}
+.ceo .sg b{font-weight:500;font-size:17px;letter-spacing:.3em}
+.ceo .sg span{color:var(--mute);font-size:13px}
+
+/* ---------- license ---------- */
+.lc{padding:10vh 0 14vh;border-top:1px solid var(--line)}
+.lcg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:4vw;padding:0 var(--gx)}
+.idc{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 22px;font-size:14.5px;align-content:start;border-top:1px solid var(--ink);padding-top:18px}
+.idc dt{color:var(--mute)}
+.idc dd{margin:0}
+.certs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.certs button{text-align:left}
+.certs .ph{aspect-ratio:1/1.41;overflow:hidden;background:#fff;border:1px solid var(--line)}
+.certs .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .8s var(--ease)}
+.certs button:hover .ph img{transform:scale(1.04)}
+.certs b{display:block;margin-top:10px;font-size:14px;font-weight:500;letter-spacing:-.02em}
+.certs small{display:block;color:var(--mute);font-size:12.5px}
+
+/* ---------- book band ---------- */
+.bk{background:var(--dark);color:var(--paper);padding:13vh var(--gx);display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:5vw;align-items:center;overflow:hidden}
+.bk h2{margin:0;font-family:var(--fd);font-weight:300;font-size:clamp(56px,9vw,160px);line-height:.88;letter-spacing:-.06em}
+.bk p{margin:22px 0 28px;max-width:420px;color:rgba(244,243,239,.72);font-size:15px}
+.bk .btn{border-color:var(--paper)}
+.bk .btn:hover{background:var(--paper);color:var(--ink)}
+.bkc{justify-self:center;width:min(300px,60vw);aspect-ratio:9/16;position:relative;transform:rotate(-4deg);box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.bkc img{width:100%;height:100%;object-fit:cover}
+.bkc .t{position:absolute;left:18px;right:18px;bottom:20px;color:var(--ink)}
+.bkc .t small{display:block;font-family:var(--fd);font-size:10px;letter-spacing:.16em;color:var(--bronze)}
+.bkc .t b{display:block;font-weight:700;font-size:21px;line-height:1.3;letter-spacing:-.04em;margin-top:6px}
+
+/* ---------- contact ---------- */
+.ct{padding:16vh var(--gx) 10vh}
+.ct h2{margin:0;font-family:var(--fd);font-weight:300;font-size:clamp(76px,14.5vw,250px);line-height:.85;letter-spacing:-.065em}
+.ct .sub{margin:3vh 0 7vh;font-size:clamp(17px,1.6vw,22px);font-weight:300;letter-spacing:-.03em}
+.ctg{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:6vw}
+.ct form{display:grid;grid-template-columns:1fr 1fr;gap:26px 28px}
+.fld{display:block;border-bottom:1px solid var(--ink)}
+.fld span{display:block;color:var(--mute)}
+.fld input,.fld textarea{width:100%;background:transparent;border:0;outline:0;font:inherit;font-size:max(16px,17px);padding:10px 0 12px;color:var(--ink);resize:none;border-radius:0}
+.fld.full,.ct .full{grid-column:1/-1}
+.opt{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.opt label{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{display:block;font-size:13.5px;padding:8px 15px;border:1px solid var(--line);border-radius:99px;transition:.2s}
+.opt input:checked+span{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opt input:focus-visible+span{outline:2px solid var(--bronze);outline-offset:2px}
+.agree{display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--mute)}
+.agree input{width:18px;height:18px;accent-color:var(--ink);margin:0}
+.ct .send{justify-self:start;height:56px;padding:0 34px}
+.form-msg{grid-column:1/-1;margin:0;min-height:22px;font-size:14px}
+.side-c{display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--ink);padding-top:18px}
+.side-c .btn{justify-content:center}
+.side-c svg{width:17px;height:17px}
+.side-c .m{margin-top:14px;font-size:13.5px;color:var(--mute);line-height:1.7}
+
+/* ---------- footer ---------- */
+.ft{padding:0 var(--gx) calc(96px + env(safe-area-inset-bottom,0px));overflow:hidden}
+.ft .wm{font-family:var(--fd);font-weight:200;font-size:30vw;line-height:.8;letter-spacing:-.07em;margin:0;white-space:nowrap;display:inline-block;transform-origin:0 100%}
+.ft .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mute)}
+
+/* ---------- all projects ---------- */
+.pfall{position:fixed;inset:0;z-index:80;background:var(--bg);display:flex;flex-direction:column;clip-path:inset(100% 0 0 0);visibility:hidden;transition:clip-path .9s cubic-bezier(.77,0,.18,1),visibility 0s .9s}
+.pfall.on{clip-path:inset(0);visibility:visible;transition:clip-path .9s cubic-bezier(.77,0,.18,1),visibility 0s}
+.pf-bar{display:flex;justify-content:space-between;align-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) var(--gx) 14px;border-bottom:1px solid var(--line)}
+.pf-bar img{height:30px;filter:brightness(0)}
+.pf-x{height:40px;padding:0 18px;border-radius:99px;border:1px solid var(--ink);font-size:13px}
+.pf-body{flex:1;overflow:auto;overscroll-behavior:contain;padding:5vh var(--gx) 12vh}
+.pf-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:22px}
+.pf-head h2{margin:0;font-family:var(--fd);font-weight:300;font-size:clamp(50px,8vw,130px);line-height:.9;letter-spacing:-.055em}
+.pf-head h2 sup{font-size:.22em;letter-spacing:0;vertical-align:top;color:var(--mute)}
+.pf-filters,.pf-cats{display:flex;flex-wrap:wrap;gap:6px}
+.pf-filters button,.pf-cats button{height:36px;padding:0 14px;border-radius:99px;border:1px solid var(--line);font-size:13px}
+.pf-filters button.on,.pf-cats button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pf-filters small{opacity:.55;margin-left:4px}
+.pf-cats{margin-bottom:28px}
+.pf-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 18px}
+.pf-card{text-align:left}
+.pf-card .ph{aspect-ratio:4/3;overflow:hidden;background:var(--bg2)}
+.pf-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.pf-card .ph img.err{opacity:0}
+.pf-card:hover .ph img{transform:scale(1.05)}
+.pf-card .cp{display:flex;justify-content:space-between;gap:10px;margin-top:10px;align-items:baseline}
+.pf-card b{font-weight:500;font-size:14.5px;letter-spacing:-.02em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pf-card span{color:var(--mute);white-space:nowrap}
+.pf-empty{color:var(--mute)}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(14,14,13,.94);opacity:0;visibility:hidden;transition:opacity .35s,visibility 0s .35s}
+.lb.on{opacity:1;visibility:visible;transition:opacity .35s,visibility 0s}
+.lb .x{position:fixed;right:var(--gx);top:calc(16px + env(safe-area-inset-top,0px));z-index:2;height:40px;padding:0 18px;border-radius:99px;border:1px solid rgba(244,243,239,.35);color:var(--paper);font-size:13px}
+.lb-in{height:100%;overflow:auto;overscroll-behavior:contain;padding:calc(70px + env(safe-area-inset-top,0px)) var(--gx) 10vh;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lb-cap{width:min(1200px,100%);color:var(--paper);display:grid;gap:6px;margin-bottom:8px}
+.lb-cap h3{margin:0;font-family:var(--fd),var(--fk);font-weight:300;font-size:clamp(30px,3.6vw,56px);letter-spacing:-.045em;line-height:1.05}
+.lb-cap .lab{color:rgba(244,243,239,.6)}
+.lbf{position:relative;display:block;width:min(1200px,100%)}
+.lbf img{width:100%;height:auto;background:#222}
+.lbf.mag{width:auto;max-width:100%}.lbf.mag img{width:auto;max-width:100%;max-height:calc(100vh - 170px);margin:0 auto}
+.lbf::after{content:"© DAGAON GROUP";position:absolute;right:14px;bottom:12px;font:500 11px/1 'Inter Tight',sans-serif;letter-spacing:.16em;color:rgba(255,255,255,.55);text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.lb .cert img{background:#fff;width:auto;max-width:100%;max-height:none}
+
+/* ---------- reveal helpers ---------- */
+.fu{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1.2s var(--ease)}
+.fu.in{opacity:1;transform:none}
+
+/* ---------- mobile ---------- */
+/* ---------- magazine: 어두운 무대 위로 매거진 표지가 가로로 흘러감(스크롤 연동) ---------- */
+.mg{position:relative;background:var(--dark);color:var(--paper);height:320vh}
+.mg-stick{position:sticky;top:0;height:100vh;overflow:hidden}
+.mg-head{position:absolute;left:var(--gx);top:calc(14vh + 10px);z-index:1;max-width:min(40vw,520px);transition:opacity .2s linear}
+.mg-head .lab{color:rgba(244,243,239,.5)}
+.mg-head h2{margin:18px 0 0;font-family:var(--fd);font-weight:300;font-size:clamp(56px,7.6vw,140px);line-height:.9;letter-spacing:-.06em}
+.mg-head h2 sup{font-size:.2em;letter-spacing:0;vertical-align:top;margin-left:.25em;color:rgba(244,243,239,.45)}
+.mg-head p{margin:26px 0 0;max-width:340px;font-size:14px;color:rgba(244,243,239,.62)}
+.mg-prog{position:absolute;right:var(--gx);top:calc(14vh + 10px);z-index:3;display:flex;align-items:center;gap:12px;color:rgba(244,243,239,.8)}
+.mg-prog i{position:relative;display:block;width:90px;height:1px;background:rgba(244,243,239,.25);overflow:hidden}
+.mg-prog i b{position:absolute;inset:0;background:var(--paper);transform-origin:0 50%;transform:scaleX(0)}
+.mg-bgw{position:absolute;left:0;bottom:-.14em;z-index:0;white-space:nowrap;font-family:var(--fd);font-weight:200;font-size:23vw;line-height:1;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px rgba(244,243,239,.1);pointer-events:none;will-change:transform}
+.mg-track{position:absolute;left:0;bottom:9vh;z-index:2;display:flex;align-items:flex-end;gap:5vw;padding:0 10vw 0 47vw;will-change:transform}
+.mgi{--d:0;flex:none;display:block;text-align:left;color:var(--paper);transform:translate3d(0,calc(var(--d)*var(--d)*70px),0) rotate(calc(var(--d)*3.5deg));transform-origin:50% 100%;opacity:calc(1 - var(--d)*var(--d)*.45)}
+.mgi .cv{display:block;position:relative;height:min(58vh,620px);aspect-ratio:670/1200;overflow:hidden;background:#222;box-shadow:0 40px 80px rgba(0,0,0,.45)}
+.mgi .cv img{width:100%;height:100%;object-fit:cover;transform:translate3d(calc(var(--d)*-5%),0,0) scale(1.12);transition:filter .6s}
+.mgi .cv::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,.35));pointer-events:none}
+.mgi .vw{position:absolute;right:14px;top:14px;z-index:1;height:30px;padding:0 13px;border-radius:99px;background:rgba(244,243,239,.92);color:var(--ink);display:flex;align-items:center;font-family:var(--fd);font-size:11px;font-weight:500;letter-spacing:.12em;opacity:0;transform:translateY(-6px);transition:opacity .35s,transform .5s var(--ease)}
+.mgi:hover .vw{opacity:1;transform:none}
+.mgi:hover .cv img{filter:brightness(1.06)}
+.mgi .mt{display:block;padding-top:16px}
+.mgi .mt .lab{display:block;color:rgba(244,243,239,.5)}
+.mgi .mt b{display:block;margin-top:8px;font-family:var(--fd);font-weight:300;font-size:clamp(28px,2.4vw,40px);line-height:1;letter-spacing:-.045em}
+.mgi .mt small{display:block;margin-top:8px;font-size:13px;color:rgba(244,243,239,.7)}
+.mgi .ds{display:none}
+@media (max-width:760px){
+  .mg{height:auto!important;padding:11vh 0 13vh;overflow:hidden}
+  .mg-stick{position:static;height:auto;overflow:visible}
+  .mg-head{position:static;max-width:none;padding:0 var(--gx);opacity:1!important}
+  .mg-head h2{font-size:clamp(52px,15vw,84px)}
+  .mg-prog{position:static;margin:28px var(--gx) 0}
+  .mg-bgw{display:none}
+  .mg-track{position:static;transform:none!important;margin-top:4vh;padding:0 var(--gx);gap:14px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
+  .mg-track::-webkit-scrollbar{display:none}
+  .mgi{flex:0 0 68vw;scroll-snap-align:center;transform:none!important;opacity:1!important}
+  .mgi:last-child{margin-right:var(--gx)}
+  .mgi .cv{height:auto;width:100%}
+  .mgi .cv img{transform:none}
+  .mgi .vw{opacity:1;transform:none;height:26px;font-size:10px}
+}
+@media (min-width:761px){.mgi{will-change:transform;backface-visibility:hidden}.mgi .cv img{will-change:transform}}
+@media (prefers-reduced-motion:reduce){.mgi,.mgi .cv img{transform:none!important}}
+@media (max-width:760px){
+  body{font-size:15px}
+  .top .meta{display:none}
+  .top .logo img{height:30px}
+  .w{font-size:clamp(52px,16.5vw,84px)}
+  .w1{top:17%}.w2{top:40%}.w3{bottom:26%}
+  .sd{bottom:calc(96px + env(safe-area-inset-bottom,0px));max-width:none;left:var(--gx)!important;right:var(--gx)!important;font-size:13px}
+  .hcount{top:calc(70px + env(safe-area-inset-top,0px))}
+  .hero.is3d{height:760vh}
+  .hint{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .hero.is3d .sd{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+  .hero.is3d .w3{bottom:calc(31% + 20px)}
+  .hero.is3d .w2{top:38%}
+  .num b{font-size:clamp(72px,24vw,120px)}
+  .num span{font-size:10.5px}
+  .xp{height:220vh}
+  .xp-head p{display:none}
+  .xp-h{top:auto;bottom:calc(110px + env(safe-area-inset-bottom,0px));transform:none}
+  .ab{grid-template-columns:1fr;gap:22px;padding:14vh var(--gx) 12vh}
+  .ab .foot{grid-column:1;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .sh{flex-direction:column;align-items:flex-start;gap:14px}
+  .dvr{grid-template-columns:1fr;gap:12px;padding:26px var(--gx) 30px}
+  .dvr .n{padding-top:0}
+  .dvr .mi{display:block;aspect-ratio:16/10;overflow:hidden;margin-bottom:6px}
+  .dvr .mi img{width:100%;height:100%;object-fit:cover}
+  .dvr:hover h3{transform:none}
+  .wgrid{grid-template-columns:1fr;row-gap:44px}
+  .wi:nth-child(n){grid-column:1;margin-top:0}
+  .wi:nth-child(even){width:78%;justify-self:end}
+  .wi:nth-child(n) .ph{aspect-ratio:4/3}
+  .wi:nth-child(even) .ph{aspect-ratio:4/5}
+  .steps{grid-template-columns:1fr}
+  .steps li,.steps li+li{border-left:0;padding:16px 0 18px;border-top:1px solid var(--line)}
+  .steps li:first-child{border-top-color:var(--ink)}
+  .steps h3{margin-top:12px}
+  .ceo{grid-template-columns:1fr;gap:28px;padding:12vh var(--gx)}
+  .ceo .ph{max-width:46%}
+  .lcg{grid-template-columns:1fr;gap:28px}
+  .certs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bk{grid-template-columns:1fr;gap:44px;padding:12vh var(--gx)}
+  .ctg{grid-template-columns:1fr;gap:40px}
+  .ct form{grid-template-columns:1fr;gap:22px}
+  .pf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}
+  .pf-cats,.pf-filters{flex-wrap:nowrap;overflow-x:auto;margin-left:calc(-1 * var(--gx));margin-right:calc(-1 * var(--gx));padding:0 var(--gx);scrollbar-width:none}
+  .pf-cats::-webkit-scrollbar,.pf-filters::-webkit-scrollbar{display:none}
+  .pf-cats button,.pf-filters button{flex:0 0 auto}
+  .pf-head{flex-direction:column;align-items:stretch}
+  .flimg{display:none}
+}
+@media (min-width:761px) and (max-width:1100px){
+  .pf-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .dvr{grid-template-columns:60px minmax(0,1fr) minmax(0,300px)}
+  .certs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){
+  .slide .bg img,.slide.on .bg img{transform:none;transition:none}
+  .w>span,.slide.on .w>span,.slide.out .w>span{transition:none;transform:none}
+  .fu{opacity:1;transform:none;transition:none}
+  .rv .ph{clip-path:none}.rv .ph img{transform:none}
+  .reveal .rw{opacity:1!important}
+}
+/* 휴대폰: 가로 사진을 세로 화면에 꽉 채워 확대되던 구간 → 사진 원래 비율 그대로 (첫 화면·PC는 그대로) */
+@media (max-width:760px){
+  .st{height:auto;min-height:0;display:grid;grid-template-columns:1fr 1fr;align-items:end;padding:calc(88px + env(safe-area-inset-top,0px)) 0 calc(76px + env(safe-area-inset-bottom,0px))}
+  .st::after{display:none}
+  .st .glass{position:relative;left:auto;top:auto;grid-column:1/-1;order:-1;width:auto;margin:0 var(--gx) 26px;background:rgba(255,255,255,.06)}
+  .st .bg{position:relative;inset:auto;grid-column:1/-1;width:100%;aspect-ratio:2000/1108;overflow:hidden;transform:none!important}
+  .st .spark{position:relative;left:auto;top:auto;grid-column:1/-1;margin:28px auto 0}
+  .st .num{position:static;padding:26px var(--gx) 0}
+  .st .num.l{padding-right:0}.st .num.r{padding-left:0}
+  .xp-m{inset:auto;left:0;right:0;top:46%;height:56.25vw;transform:translateY(-50%)}
+  .xp-h{top:calc(46% + 28.2vw + 26px);bottom:auto;color:var(--ink);transform:none}
+  .xp-h p{color:var(--mute)}
+  .mgi{flex:0 0 54vw}
+  .bkc{width:min(280px,64vw);aspect-ratio:4/5}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#top" aria-label="다가온 그룹 처음으로"><img src="img/logo.png" alt="DAGAON" decoding="async"></a>
+  <div class="meta lab"><span>Brand Space<br>Design Group</span><span>Seoul — Korea<br>Since 2026</span><a href="#contact">Let's talk ↗</a></div>
+  <div class="lang" role="group" aria-label="Language"><a href="?lang=ko" hreflang="ko" data-lang="ko" aria-current="true">KO</a><i></i><a href="?lang=en" hreflang="en" data-lang="en" aria-current="false">EN</a></div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero is3d" id="hero" aria-label="다가온 그룹">
+<div class="h-stick">
+  <picture><source media="(max-width:760px) and (orientation:portrait)" srcset="img/seq/still_m.webp"><img id="hStill" class="h-still" src="img/seq/still.webp" alt="" aria-hidden="true" decoding="async"></picture>
+  <video id="hvF" class="hv" muted playsinline webkit-playsinline preload="auto" disableremoteplayback aria-hidden="true"></video><video id="hvB" class="hv" muted playsinline webkit-playsinline preload="none" disableremoteplayback aria-hidden="true"></video>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="slide A on" data-i="0">
+    <div class="bg"><picture><source media="(max-width:760px)" srcset="img/v12/h1_m.webp"><img src="img/v12/h1.webp" alt="호텔 로비 인테리어" decoding="async"></picture></div>
+    <div class="w w1"><span style="--d:0s">Space</span></div><div class="w w2"><span style="--d:.08s">as</span></div><div class="w w3"><span style="--d:.16s">Structure</span></div>
+    <p class="sd"><b>DAGAON GROUP</b>공간은 결과가 아니라 구조입니다. 기획부터 디자인, 가구, 디스플레이까지 한 기준으로 완성합니다.</p>
+  </div>
+  <div class="slide B" data-i="1">
+    <div class="bg"><picture><source media="(max-width:760px)" srcset="img/v12/h2_m.webp"><img src="img/v12/h2.webp" alt="웨딩홀 인테리어" loading="lazy" decoding="async"></picture></div>
+    <div class="w w1"><span style="--d:0s">Designing</span></div><div class="w w2"><span style="--d:.08s">the</span></div><div class="w w3"><span style="--d:.16s">Space</span></div>
+    <p class="sd"><b>DDC — INTERIOR DESIGN</b>공간 컨셉 기획부터 3D 투시도, 실시도면까지 시공 가능한 설계로 완성합니다.</p>
+  </div>
+  <div class="slide A" data-i="2">
+    <div class="bg"><picture><source media="(max-width:760px)" srcset="img/v12/h3_m.webp"><img src="img/v12/h3.webp" alt="라운지 가구" loading="lazy" decoding="async"></picture></div>
+    <div class="w w1"><span style="--d:0s">Crafted</span></div><div class="w w2"><span style="--d:.08s">to</span></div><div class="w w3"><span style="--d:.16s">Fit</span></div>
+    <p class="sd"><b>DDF — FURNITURE</b>공간에 맞춘 가구를 디자인하고 제작해 현장까지 납품합니다.</p>
+  </div>
+  <div class="slide B" data-i="3">
+    <div class="bg"><picture><source media="(max-width:760px)" srcset="img/v12/h4_m.webp"><img src="img/v12/h4.webp" alt="리테일 디스플레이" loading="lazy" decoding="async"></picture></div>
+    <div class="w w1"><span style="--d:0s">Staging</span></div><div class="w w2"><span style="--d:.08s">the</span></div><div class="w w3"><span style="--d:.16s">Brand</span></div>
+    <p class="sd"><b>DDP — DISPLAY</b>쇼룸·팝업·전시·리테일에서 브랜드를 만나는 순간을 연출합니다.</p>
+  </div>
+  <div class="hcount lab" aria-hidden="true"><span id="hNum">01</span><span class="bar"><i id="hBar"></i></span><span>04</span></div>
+  <div class="hint lab" id="hint" aria-hidden="true">Scroll to enter<i></i></div>
+</div>
+</section>
+
+<!-- STATS -->
+<section class="st" id="about" aria-label="다가온 한눈에 보기">
+  <div class="bg" id="stBg"><img src="img/v12/dark.webp" alt="" loading="lazy" decoding="async"></div>
+  <div class="glass"><div class="lab">Brand Space Design Group</div><p>디자인, 가구, 디스플레이가 따로 움직이면 공간 경험은 흩어집니다. 다가온은 세 사업부를 하나의 기준으로 묶었습니다.</p></div>
+  <svg class="spark" id="spark" viewBox="0 0 40 40" fill="#fff" aria-hidden="true"><path d="M20 0c1.2 10.6 9.4 18.8 20 20-10.6 1.2-18.8 9.4-20 20-1.2-10.6-9.4-18.8-20-20C10.6 18.8 18.8 10.6 20 0z"/></svg>
+  <div class="num l"><b>3</b><span class="lab">Divisions · 전문 사업부</span></div>
+  <div class="num r"><b id="pjN">65</b><span class="lab">Projects · 포트폴리오</span></div>
+</section>
+
+<!-- EXPAND -->
+<section class="xp" id="xp" aria-label="디자인, 가구, 디스플레이가 만나는 곳">
+  <div class="xp-stage">
+    <div class="xp-head" id="xpHead"><span class="lab dot">One-stop</span><p>DDC 인테리어 디자인·설계<br>DDF 가구 디자인·납품<br>DDP 디스플레이</p></div>
+    <div class="xp-m" id="xpM"><img src="img/v12/wide.webp" alt="커뮤니티 센터 인테리어" loading="lazy" id="xpI" decoding="async"></div>
+    <div class="xp-h" id="xpH"><h2>Where design, furniture<br>and display connect</h2><p>공간의 첫 장부터 마지막 장까지, 한 회사가 책임집니다.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="ab" aria-label="다가온의 철학">
+  <div class="side"><span class="lab">Our philosophy</span><span class="lab" style="color:var(--ink)">공간은 결과가 아니라 구조</span></div>
+  <p class="reveal" data-reveal>공간은 예쁘게 만드는 것으로 끝나지 않습니다. 다가온은 공간을 브랜드가 실제로 운영되고 성장하는 구조로 설계합니다. 설계의 정밀함, 가구의 미학, 연출의 완성도를 하나의 기준 아래 통합합니다.</p>
+  <div class="foot">
+    <div><b>Plan</b><span>상담·공간 기획</span></div>
+    <div><b>Design</b><span>디자인·설계·가구</span></div>
+    <div><b>Stage</b><span>디스플레이 연출</span></div>
+  </div>
+</section>
+
+<!-- DIVISIONS -->
+<section class="dv" id="divisions" aria-label="사업부">
+  <div class="sh"><h2>Three divisions,<br>one standard.</h2><p>인테리어 디자인·설계, 가구 디자인·납품, 디스플레이. 세 사업부가 하나의 프로젝트 안에서 같은 기준으로 움직입니다.</p></div>
+  <div class="dvr" data-pf="ddc" data-img="img/v12/h2.webp" role="button" tabindex="0">
+    <span class="n lab">01 / DDC</span>
+    <div><div class="mi"><img src="img/v12/h2.webp" alt="" loading="lazy" decoding="async"></div><h3>Interior<br>Design</h3></div>
+    <div class="tx"><div class="c lab"><span>Dagaon Design Company</span></div><p>상업공간, 주거, 호텔, 웨딩홀, 홍보관까지. 공간 컨셉과 동선을 기획하고 3D 투시도와 CAD·실시도면으로 시공 가능한 설계를 완성합니다.</p><div class="tags"><span>공간 기획</span><span>인테리어 디자인</span><span>3D 투시도</span><span>CAD·실시도면</span></div><span class="go">DDC 작업 보기 →</span></div>
+  </div>
+  <div class="dvr" data-pf="ddf" data-img="img/v12/h3.webp" role="button" tabindex="0">
+    <span class="n lab">02 / DDF</span>
+    <div><div class="mi"><img src="img/v12/h3.webp" alt="" loading="lazy" decoding="async"></div><h3>Furniture</h3></div>
+    <div class="tx"><div class="c lab"><span>Dagaon Design Furniture</span></div><p>공간 디자인 경험에서 출발한 가구. 라운지 체어, 빌트인 워드로브, 키친 시스템을 디자인·제작하고 호텔·라운지·주거 현장에 일괄 납품합니다.</p><div class="tags"><span>가구 디자인</span><span>맞춤 제작</span><span>일괄 납품</span><span>빌트인·키친</span></div><span class="go">DDF 작업 보기 →</span></div>
+  </div>
+  <div class="dvr" data-pf="ddp" data-img="img/v12/h4.webp" role="button" tabindex="0">
+    <span class="n lab">03 / DDP</span>
+    <div><div class="mi"><img src="img/v12/h4.webp" alt="" loading="lazy" decoding="async"></div><h3>Display</h3></div>
+    <div class="tx"><div class="c lab"><span>Dagaon Display Production</span></div><p>브랜드 쇼룸, 팝업 스토어, 전시, 럭셔리 리테일. 브랜드가 고객을 만나는 순간을 디스플레이로 기획하고 연출·설치합니다.</p><div class="tags"><span>브랜드 쇼룸</span><span>팝업 스토어</span><span>전시 연출</span><span>리테일 VMD</span></div><span class="go">DDP 작업 보기 →</span></div>
+  </div>
+</section>
+<div class="flimg" id="flimg" aria-hidden="true"><img alt="" id="flimgI" decoding="async"></div>
+
+<!-- WORKS -->
+<section class="wk" id="works" aria-label="대표 작업">
+  <div class="sh"><h2>Selected<br>works<sup id="wkN">(65)</sup></h2><p>다가온 그룹이 기획·설계하고 납품·연출한 공간입니다. 사진을 누르면 프로젝트 사진을 크게 볼 수 있습니다.</p></div>
+  <div class="wgrid" id="wgrid"></div>
+  <div class="wmore"><a class="btn" href="#portfolio" data-pf-open="all">전체 포트폴리오 보기 →</a></div>
+</section>
+
+<!-- PROCESS -->
+<section class="pr" id="process" aria-label="진행 절차">
+  <div class="sh"><h2>One-stop<br>flow.</h2><p>상담과 기획에서 디자인·설계, 가구 납품, 디스플레이 연출까지. 업체를 바꿀 때마다 생기는 공백 없이 다가온 안에서 이어집니다.</p></div>
+  <ol class="steps">
+    <li class="fu"><div class="n lab"><span>01</span><span>DDC</span></div><h3>상담·공간 기획</h3><em>Consult</em><p>브랜드 목표, 운영 방식, 예산을 먼저 정리하고 공간이 해야 할 역할을 정합니다.</p></li>
+    <li class="fu"><div class="n lab"><span>02</span><span>DDC</span></div><h3>인테리어 디자인</h3><em>Design</em><p>컨셉, 동선, 마감과 조명을 디자인하고 3D 투시도로 완성 모습을 먼저 보여드립니다.</p></li>
+    <li class="fu"><div class="n lab"><span>03</span><span>DDC</span></div><h3>설계·실시도면</h3><em>Drawing</em><p>CAD·실시도면으로 현장에서 그대로 시공할 수 있는 설계를 마무리합니다.</p></li>
+    <li class="fu"><div class="n lab"><span>04</span><span>DDF</span></div><h3>가구 디자인·납품</h3><em>Furniture</em><p>도면에 맞춘 가구를 디자인·제작하고 현장 일정에 맞춰 납품합니다.</p></li>
+    <li class="fu"><div class="n lab"><span>05</span><span>DDP</span></div><h3>디스플레이 연출</h3><em>Display</em><p>쇼룸·팝업·전시의 디스플레이를 기획하고 연출·설치까지 마무리합니다.</p></li>
+  </ol>
+  <p class="end fu">공간의 첫 장부터 마지막 장까지,<br>한 회사가 처음부터 끝까지 책임집니다.</p>
+</section>
+
+<!-- MAGAZINE -->
+<section class="mg" id="magazine" aria-label="브랜드 매거진">
+  <div class="mg-stick">
+    <div class="mg-bgw" id="mgBg" aria-hidden="true">Magazine · Magazine</div>
+    <div class="mg-head" id="mgH">
+      <span class="lab">Brand Magazine · 2026</span>
+      <h2>Brand<br>magazine<sup>(05)</sup></h2>
+      <p>다가온 그룹과 세 사업부의 사람, 일하는 방식, 대표 프로젝트를 매거진으로 엮었습니다. 표지를 누르면 크게 볼 수 있습니다.</p>
+    </div>
+    <div class="mg-prog lab" aria-hidden="true"><span id="mgN">01</span><i><b id="mgB"></b></i><span>05</span></div>
+    <div class="mg-track" id="mgT">
+      <button class="mgi" type="button"><span class="cv"><img src="img/mag_visionary_2026.webp" alt="VISIONARY 2026 매거진 표지" loading="lazy" draggable="false" decoding="async"><span class="vw">VIEW</span></span><span class="mt"><span class="lab">No.01 — Spring 2026</span><b>Visionary</b><small>다가온 그룹 2026 비전</small></span><span class="ds">공간 브랜드 그룹으로서 다가온이 그리는 2026년의 방향과 기준을 담았습니다.</span></button>
+      <button class="mgi" type="button"><span class="cv"><img src="img/mag_dagaon_magazine_v2.webp" alt="DAGAON GROUP 매거진 표지" loading="lazy" draggable="false" decoding="async"><span class="vw">VIEW</span></span><span class="mt"><span class="lab">No.02 — Vol. 01</span><b>Dagaon</b><small>그룹 브랜드 북</small></span><span class="ds">기획부터 디자인, 가구, 디스플레이까지. 다가온 그룹의 구조와 일하는 방식을 한 권에 정리했습니다.</span></button>
+      <button class="mgi" type="button"><span class="cv"><img src="img/mag_ddc.webp" alt="DDC 매거진 표지" loading="lazy" draggable="false" decoding="async"><span class="vw">VIEW</span></span><span class="mt"><span class="lab">No.03 — Design Issue</span><b>DDC</b><small>인테리어 디자인·설계</small></span><span class="ds">공간을 기획하고 설계하는 DDC 디자이너들의 이야기와 대표 프로젝트를 담았습니다.</span></button>
+      <button class="mgi" type="button"><span class="cv"><img src="img/mag_ddf.webp" alt="DDF 매거진 표지" loading="lazy" draggable="false" decoding="async"><span class="vw">VIEW</span></span><span class="mt"><span class="lab">No.04 — Furniture Issue</span><b>DDF</b><small>가구 디자인·납품</small></span><span class="ds">공간에서 출발한 가구, DDF의 디자인 라인과 납품 현장을 소개합니다.</span></button>
+      <button class="mgi" type="button"><span class="cv"><img src="img/mag_ddp.webp" alt="DDP 매거진 표지" loading="lazy" draggable="false" decoding="async"><span class="vw">VIEW</span></span><span class="mt"><span class="lab">No.05 — Display Issue</span><b>DDP</b><small>디스플레이 연출</small></span><span class="ds">쇼룸과 팝업, 전시의 순간을 만드는 DDP 디스플레이 작업을 담았습니다.</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- CEO -->
+<section class="ceo" id="ceo" aria-label="대표 인사">
+  <div class="ph fu"><img src="img/v12/ceo.webp" alt="" loading="lazy" decoding="async"></div>
+  <div>
+    <div class="q" aria-hidden="true">“</div>
+    <p class="reveal" data-reveal>공간은 결과가 아니라 구조입니다. 처음 그린 의도가 마지막까지 이어지도록, 끝까지 책임지겠습니다.</p>
+    <p class="body">저는 목공 현장에서 일을 시작해 현장 소장을 거쳐 설계 회사를 세웠습니다. 그래서 다가온의 도면은 현장에서 실제로 만들 수 있는 디테일을 기준으로 그립니다.</p>
+    <div class="sg"><b>김도경</b><span>주식회사 다가온 대표이사 · From the field</span></div>
+  </div>
+</section>
+
+<!-- LICENSE -->
+<section class="lc" id="license" aria-label="자격 및 인증">
+  <div class="sh"><h2>Verified<br>company.</h2><p>서류로 확인되는 회사입니다. 서류를 누르면 원본을 볼 수 있습니다.</p></div>
+  <div class="lcg">
+    <dl class="idc">
+      <dt>상호</dt><dd>주식회사 다가온</dd>
+      <dt>대표</dt><dd>김도경</dd>
+      <dt>사업자등록번호</dt><dd>223-81-21515</dd>
+      <dt>나라장터</dt><dd>입찰참가자격 · 업종코드 4442</dd>
+      <dt>전문분야</dt><dd>산업디자인전문회사 · 환경디자인</dd>
+    </dl>
+    <div class="certs">
+      <button type="button" data-cert="img/cert/design-cert-1.webp"><div class="ph"><img src="img/cert/design-cert-1.webp" alt="산업디자인전문회사 신고확인증" loading="lazy" decoding="async"></div><b>산업디자인전문회사</b><small>KIDP 제22454호</small></button>
+      <button type="button" data-cert="img/cert/direct-prod-cert-1.webp"><div class="ph"><img src="img/cert/direct-prod-cert-1.webp" alt="직접생산확인증명서" loading="lazy" decoding="async"></div><b>직접생산확인증명서</b><small>디자인서비스</small></button>
+      <button type="button" data-cert="img/cert/sme-cert-1.webp"><div class="ph"><img src="img/cert/sme-cert-1.webp" alt="중소기업 확인서" loading="lazy" decoding="async"></div><b>중소기업 확인서</b><small>유효기간 ~ 2027.03.31</small></button>
+      <button type="button" data-cert="img/cert/bizreg-1.webp,img/cert/bizreg-2.webp"><div class="ph"><img src="img/cert/bizreg-1.webp" alt="사업자등록증" loading="lazy" decoding="async"></div><b>사업자등록증</b><small>법인사업자</small></button>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="bk" id="book" aria-label="다가온 북">
+  <div>
+    <span class="lab" style="color:rgba(244,243,239,.55)">Company Book · Vol. 01</span>
+    <h2 style="margin-top:18px">Company<br>Book</h2>
+    <p>다가온 그룹을 한 권에 담았습니다. 휴대폰에서 손가락으로 밀어 넘겨 보세요. 카톡으로 받으셨다면 같은 북입니다.</p>
+    <a class="btn" href="/book/">북 펼쳐보기 →</a>
+  </div>
+  <a class="bkc" href="/book/" aria-label="다가온 북 열기"><img src="book/img/cover.webp" alt="" loading="lazy" decoding="async"><div class="t"><small>BRAND SPACE DESIGN GROUP</small><b>공간의 첫 장부터<br>마지막 장까지.</b></div></a>
+</section>
+
+<!-- CONTACT -->
+<section class="ct" id="contact" aria-label="상담 신청">
+  <h2>Let's talk</h2>
+  <p class="sub">공간 고민, 지금 얘기해 주세요. 무료로 상담해 드립니다.</p>
+  <div class="ctg">
+    <form id="iq" novalidate>
+      <label class="fld"><span class="lab">이름 / 회사명</span><input id="f-name" name="name" autocomplete="name" required></label>
+      <label class="fld"><span class="lab">연락처</span><input id="f-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required></label>
+      <div class="full"><span class="lab" style="color:var(--mute)">공간 유형</span>
+        <div class="opt" role="radiogroup" aria-label="공간 유형">
+          <label><input type="radio" name="type" value="매장 창업" id="t1"><span>매장 창업</span></label>
+          <label><input type="radio" name="type" value="주거" id="t2"><span>주거</span></label>
+          <label><input type="radio" name="type" value="기업·관공서" id="t3"><span>기업·관공서</span></label>
+          <label><input type="radio" name="type" value="쇼룸·전시" id="t4"><span>쇼룸·전시</span></label>
+        </div></div>
+      <div class="full"><span class="lab" style="color:var(--mute)">필요한 분야</span>
+        <div class="opt chips">
+          <label><input type="checkbox" value="DDC" id="d1"><span>DDC 디자인·설계</span></label>
+          <label><input type="checkbox" value="DDF" id="d2"><span>DDF 가구</span></label>
+          <label><input type="checkbox" value="DDP" id="d3"><span>DDP 디스플레이</span></label>
+        </div></div>
+      <label class="fld full"><span class="lab">내용 (선택)</span><textarea id="f-msg" name="msg" rows="3" placeholder="위치, 면적, 일정 등 알려주시면 더 정확하게 안내해 드립니다."></textarea></label>
+      <label class="agree full"><input type="checkbox" name="agree" id="f-agree" required>개인정보 수집·이용(상담 목적)에 동의합니다</label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn fill send full" type="submit">무료 상담 신청 →</button>
+      <p class="form-msg" id="iqMsg" role="status"></p>
+    </form>
+    <div class="side-c">
+      <span class="lab">Direct</span>
+      <a class="btn" href="tel:01050177756" aria-label="전화 상담"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>전화 상담</a>
+      <a class="btn" href="/book/">다가온 북 보기</a>
+      <p class="m">E-MAIL<br>dagaon0227@dagaon.by-works.net</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <p class="wm" aria-hidden="true">DAGAON</p>
+  <div class="row"><span>© 2026 DAGAON GROUP · 주식회사 다가온</span><span>대표 김도경 · 사업자등록번호 223-81-21515</span><span>Brand Space Design Group</span></div>
+</footer>
+
+<!-- capsule menu -->
+<div class="scrim" id="scrim"></div>
+<nav class="mpanel" id="menu" aria-label="메뉴" aria-hidden="true">
+  <div class="mh lab"><span>Menu</span><div class="lang" role="group" aria-label="Language"><a href="?lang=ko" hreflang="ko" data-lang="ko" aria-current="true">KO</a><i></i><a href="?lang=en" hreflang="en" data-lang="en" aria-current="false">EN</a></div></div>
+  <ol>
+    <li><a href="#about"><span class="n">01</span><span class="t">About</span><span class="k">다가온</span></a></li>
+    <li><a href="#divisions"><span class="n">02</span><span class="t">Divisions</span><span class="k">사업부</span></a></li>
+    <li><a href="#works"><span class="n">03</span><span class="t">Works</span><span class="k">작업</span></a></li>
+    <li><a href="#portfolio" data-pf-open="all"><span class="n">04</span><span class="t">All projects</span><span class="k">전체 포트폴리오</span></a></li>
+    <li><a href="#process"><span class="n">05</span><span class="t">Process</span><span class="k">진행 절차</span></a></li>
+    <li><a href="#magazine"><span class="n">06</span><span class="t">Magazine</span><span class="k">매거진</span></a></li>
+    <li><a href="#license"><span class="n">07</span><span class="t">License</span><span class="k">자격·인증</span></a></li>
+    <li><a href="/book/"><span class="n">08</span><span class="t">Company Book</span><span class="k">다가온 북</span></a></li>
+  </ol>
+  <div class="mf"><a class="pri" href="#contact">상담 신청</a><a href="tel:01050177756"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>전화 상담</a></div>
+</nav>
+<div class="cap" id="cap">
+  <a class="ci" href="#top" aria-label="맨 위로"><img src="img/logo.png" alt="" decoding="async"></a>
+  <button class="cm" id="menuBtn" type="button" aria-controls="menu" aria-expanded="false">MENU</button>
+  <a class="ci" href="#contact" aria-label="상담 신청"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></a>
+</div>
+
+<!-- all projects -->
+<section class="pfall" id="pfall" role="dialog" aria-modal="true" aria-labelledby="pfH" aria-hidden="true">
+  <div class="pf-bar"><button type="button" data-pf-close aria-label="홈으로"><img src="img/logo.png" alt="DAGAON" decoding="async"></button><span class="lab">All projects</span><button class="pf-x" type="button" data-pf-close>닫기 ✕</button></div>
+  <div class="pf-body" id="pfBody" data-lenis-prevent>
+    <div class="pf-head"><h2 id="pfH">All projects<sup id="pfCount">(0)</sup></h2><div class="pf-filters" id="pfFilters" role="group" aria-label="사업부 필터"></div></div>
+    <div class="pf-cats" id="pfCats" role="group" aria-label="분야 필터"></div>
+    <div class="pf-grid" id="pfGrid"></div>
+  </div>
+</section>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="사진 크게 보기"><button class="x" type="button" data-close-lb>닫기 ✕</button><div class="lb-in" id="lbIn" data-lenis-prevent></div></div>
+
+<script>window.VID={d:"vid/hero_d.mp4",dr:"vid/hero_d_r.mp4",m:"vid/hero_m.mp4",mr:"vid/hero_m_r.mp4",dur:30.04,parts:{"vid/hero_d.mp4":2,"vid/hero_d_r.mp4":2}};</script>
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const touch=matchMedia('(hover: none), (pointer: coarse)').matches;
+const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* ---------- 한국어 / English: 한글 문장 → 영문 사전 ---------- */
+const EN={"공간은 결과가 아니라 구조입니다. 기획부터 디자인, 가구, 디스플레이까지 한 기준으로 완성합니다.":"Space is not an outcome — it is a structure. From planning to design, furniture and display, we deliver everything to one standard.","공간 컨셉 기획부터 3D 투시도, 실시도면까지 시공 가능한 설계로 완성합니다.":"From spatial concept to 3D renderings and construction drawings — design that is ready to build.","공간에 맞춘 가구를 디자인하고 제작해 현장까지 납품합니다.":"We design and make furniture for each space, and deliver it to site.","쇼룸·팝업·전시·리테일에서 브랜드를 만나는 순간을 연출합니다.":"We stage the moment people meet a brand — in showrooms, pop-ups, exhibitions and retail.","디자인, 가구, 디스플레이가 따로 움직이면 공간 경험은 흩어집니다. 다가온은 세 사업부를 하나의 기준으로 묶었습니다.":"When design, furniture and display work apart, the experience falls apart. DAGAON brings three divisions together under one standard.","Divisions · 전문 사업부":"Divisions · Specialist teams","Projects · 포트폴리오":"Projects · Portfolio","DDC 인테리어 디자인·설계":"DDC Interior design & drawings","DDF 가구 디자인·납품":"DDF Furniture design & supply","DDP 디스플레이":"DDP Display","공간의 첫 장부터 마지막 장까지, 한 회사가 책임집니다.":"From the first page of a space to the last — one company, fully accountable.","공간은 결과가 아니라 구조":"Space is structure, not outcome","공간은 예쁘게 만드는 것으로 끝나지 않습니다. 다가온은 공간을 브랜드가 실제로 운영되고 성장하는 구조로 설계합니다. 설계의 정밀함, 가구의 미학, 연출의 완성도를 하나의 기준 아래 통합합니다.":"A space is not finished when it looks beautiful. DAGAON designs space as the structure in which a brand actually operates and grows — uniting precise design, refined furniture and finished staging under one standard.","상담·공간 기획":"Consultation & planning","디자인·설계·가구":"Design, drawings & furniture","디스플레이 연출":"Display & staging","인테리어 디자인·설계, 가구 디자인·납품, 디스플레이. 세 사업부가 하나의 프로젝트 안에서 같은 기준으로 움직입니다.":"Interior design, furniture and display. Three divisions working to one standard within a single project.","상업공간, 주거, 호텔, 웨딩홀, 홍보관까지. 공간 컨셉과 동선을 기획하고 3D 투시도와 CAD·실시도면으로 시공 가능한 설계를 완성합니다.":"Commercial spaces, homes, hotels, wedding halls and sales galleries. We plan concept and circulation, and complete build-ready designs with 3D renderings and CAD construction drawings.","공간 기획":"Space planning","인테리어 디자인":"Interior design","3D 투시도":"3D renderings","CAD·실시도면":"CAD drawings","DDC 작업 보기 →":"View DDC work →","공간 디자인 경험에서 출발한 가구. 라운지 체어, 빌트인 워드로브, 키친 시스템을 디자인·제작하고 호텔·라운지·주거 현장에 일괄 납품합니다.":"Furniture born from interior design. We design and build lounge chairs, built-in wardrobes and kitchen systems, and supply hotels, lounges and homes end to end.","가구 디자인":"Furniture design","맞춤 제작":"Made to order","일괄 납품":"Turnkey supply","빌트인·키친":"Built-in & kitchen","DDF 작업 보기 →":"View DDF work →","브랜드 쇼룸, 팝업 스토어, 전시, 럭셔리 리테일. 브랜드가 고객을 만나는 순간을 디스플레이로 기획하고 연출·설치합니다.":"Brand showrooms, pop-up stores, exhibitions and luxury retail. We plan, stage and install the displays where brands meet their customers.","브랜드 쇼룸":"Brand showroom","팝업 스토어":"Pop-up store","전시 연출":"Exhibition design","리테일 VMD":"Retail VMD","DDP 작업 보기 →":"View DDP work →","다가온 그룹이 기획·설계하고 납품·연출한 공간입니다. 사진을 누르면 프로젝트 사진을 크게 볼 수 있습니다.":"Spaces planned, designed, furnished and staged by DAGAON GROUP. Tap a photo to see the full project.","전체 포트폴리오 보기 →":"View full portfolio →","상담과 기획에서 디자인·설계, 가구 납품, 디스플레이 연출까지. 업체를 바꿀 때마다 생기는 공백 없이 다가온 안에서 이어집니다.":"From consultation and planning to design, furniture and display. No gaps from switching vendors — everything continues within DAGAON.","브랜드 목표, 운영 방식, 예산을 먼저 정리하고 공간이 해야 할 역할을 정합니다.":"We start with your brand goals, operations and budget, and define what the space must do.","컨셉, 동선, 마감과 조명을 디자인하고 3D 투시도로 완성 모습을 먼저 보여드립니다.":"We design the concept, circulation, finishes and lighting, and show you the finished space first in 3D.","설계·실시도면":"Construction drawings","CAD·실시도면으로 현장에서 그대로 시공할 수 있는 설계를 마무리합니다.":"We finalize CAD construction drawings that can be built on site exactly as drawn.","가구 디자인·납품":"Furniture design & supply","도면에 맞춘 가구를 디자인·제작하고 현장 일정에 맞춰 납품합니다.":"We design and build furniture to the drawings and deliver on the site schedule.","쇼룸·팝업·전시의 디스플레이를 기획하고 연출·설치까지 마무리합니다.":"We plan displays for showrooms, pop-ups and exhibitions, through to staging and installation.","공간의 첫 장부터 마지막 장까지,":"From the first page of a space to the last,","한 회사가 처음부터 끝까지 책임집니다.":"one company takes responsibility from start to finish.","다가온 그룹과 세 사업부의 사람, 일하는 방식, 대표 프로젝트를 매거진으로 엮었습니다. 표지를 누르면 크게 볼 수 있습니다.":"The people, working methods and signature projects of DAGAON GROUP and its three divisions, bound as magazines. Tap a cover to view it.","다가온 그룹 2026 비전":"DAGAON GROUP Vision 2026","공간 브랜드 그룹으로서 다가온이 그리는 2026년의 방향과 기준을 담았습니다.":"The direction and standards DAGAON sets for 2026 as a space brand group.","그룹 브랜드 북":"Group brand book","기획부터 디자인, 가구, 디스플레이까지. 다가온 그룹의 구조와 일하는 방식을 한 권에 정리했습니다.":"From planning to design, furniture and display — DAGAON GROUP's structure and way of working, in one volume.","인테리어 디자인·설계":"Interior design & drawings","공간을 기획하고 설계하는 DDC 디자이너들의 이야기와 대표 프로젝트를 담았습니다.":"Stories and signature projects from the DDC designers who plan and design our spaces.","공간에서 출발한 가구, DDF의 디자인 라인과 납품 현장을 소개합니다.":"Furniture that starts from space — DDF's design lines and delivery projects.","쇼룸과 팝업, 전시의 순간을 만드는 DDP 디스플레이 작업을 담았습니다.":"DDP's display work, creating the moments in showrooms, pop-ups and exhibitions.","공간은 결과가 아니라 구조입니다. 처음 그린 의도가 마지막까지 이어지도록, 끝까지 책임지겠습니다.":"Space is not an outcome but a structure. I take responsibility to the very end, so the first intention carries through to the last detail.","저는 목공 현장에서 일을 시작해 현장 소장을 거쳐 설계 회사를 세웠습니다. 그래서 다가온의 도면은 현장에서 실제로 만들 수 있는 디테일을 기준으로 그립니다.":"I started out as a carpenter on site, became a site manager and then founded a design company. That is why DAGAON's drawings are built around details that can actually be made on site.","김도경":"Dokyung Kim","주식회사 다가온 대표이사 · From the field":"CEO, DAGAON Co., Ltd. · From the field","서류로 확인되는 회사입니다. 서류를 누르면 원본을 볼 수 있습니다.":"A company you can verify on paper. Tap a document to view the original.","상호":"Company","주식회사 다가온":"DAGAON Co., Ltd.","대표":"CEO","사업자등록번호":"Business reg. no.","나라장터":"KONEPS (public procurement)","입찰참가자격 · 업종코드 4442":"Registered bidder · Industry code 4442","전문분야":"Specialty","산업디자인전문회사 · 환경디자인":"Certified industrial design firm · Environmental design","산업디자인전문회사":"Certified industrial design firm","KIDP 제22454호":"KIDP No. 22454","직접생산확인증명서":"Direct production certificate","디자인서비스":"Design services","중소기업 확인서":"SME certificate","유효기간 ~ 2027.03.31":"Valid until 2027.03.31","사업자등록증":"Business registration","법인사업자":"Corporation","다가온 그룹을 한 권에 담았습니다. 휴대폰에서 손가락으로 밀어 넘겨 보세요. 카톡으로 받으셨다면 같은 북입니다.":"DAGAON GROUP in a single book. Swipe through the pages on your phone. (Korean edition)","북 펼쳐보기 →":"Open the book →","공간의 첫 장부터":"From the first page","마지막 장까지.":"to the last.","공간 고민, 지금 얘기해 주세요. 무료로 상담해 드립니다.":"Tell us about your space. Consultation is free.","이름 / 회사명":"Name / Company","연락처":"Phone number","공간 유형":"Space type","매장 창업":"New store","주거":"Residential","기업·관공서":"Corporate · Public sector","쇼룸·전시":"Showroom · Exhibition","필요한 분야":"What you need","DDC 디자인·설계":"DDC Design & drawings","DDF 가구":"DDF Furniture","내용 (선택)":"Details (optional)","개인정보 수집·이용(상담 목적)에 동의합니다":"I agree to the collection and use of my personal information (for consultation only)","무료 상담 신청 →":"Request a free consultation →","전화 상담":"Call us","다가온 북 보기":"View the DAGAON book","© 2026 DAGAON GROUP · 주식회사 다가온":"© 2026 DAGAON GROUP · DAGAON Co., Ltd.","대표 김도경 · 사업자등록번호 223-81-21515":"CEO Dokyung Kim · Business reg. no. 223-81-21515","다가온":"DAGAON","사업부":"Divisions","작업":"Works","전체 포트폴리오":"Full portfolio","진행 절차":"Process","매거진":"Magazine","자격·인증":"Licenses","다가온 북":"DAGAON book","상담 신청":"Contact us","닫기 ✕":"Close ✕","인테리어 디자인·설계(DDC), 가구 디자인·납품(DDF), 디스플레이(DDP). 공간의 첫 장부터 마지막 장까지 하나의 기준으로 완성하는 Brand Space Design Group, 다가온 그룹":"Interior design & drawings (DDC), furniture design & supply (DDF) and display (DDP). DAGAON GROUP — a Brand Space Design Group completing every space to one standard, from the first page to the last.","다가온 그룹 | Brand Space Design Group":"DAGAON GROUP | Brand Space Design Group","인테리어 디자인·설계, 가구, 디스플레이를 한 회사에서. 공간의 첫 장부터 마지막 장까지.":"Interior design, furniture and display from one company. From the first page of a space to the last.","다가온 그룹 처음으로":"DAGAON GROUP home","다가온 그룹":"DAGAON GROUP","호텔 로비 인테리어":"Hotel lobby interior","웨딩홀 인테리어":"Wedding hall interior","라운지 가구":"Lounge furniture","리테일 디스플레이":"Retail display","다가온 한눈에 보기":"DAGAON at a glance","디자인, 가구, 디스플레이가 만나는 곳":"Where design, furniture and display meet","커뮤니티 센터 인테리어":"Community center interior","다가온의 철학":"Our philosophy","대표 작업":"Selected works","브랜드 매거진":"Brand magazine","VISIONARY 2026 매거진 표지":"VISIONARY 2026 magazine cover","DAGAON GROUP 매거진 표지":"DAGAON GROUP magazine cover","DDC 매거진 표지":"DDC magazine cover","DDF 매거진 표지":"DDF magazine cover","DDP 매거진 표지":"DDP magazine cover","대표 인사":"CEO message","자격 및 인증":"Licenses and certifications","산업디자인전문회사 신고확인증":"Industrial design firm registration certificate","다가온 북 열기":"Open the DAGAON book","위치, 면적, 일정 등 알려주시면 더 정확하게 안내해 드립니다.":"Tell us the location, size and schedule, and we'll give you a more accurate answer.","메뉴":"Menu","맨 위로":"Back to top","홈으로":"Home","사업부 필터":"Division filter","분야 필터":"Category filter","사진 크게 보기":"Photo viewer","전체 분야":"All categories","등록된 프로젝트가 없습니다.":"No projects yet.","이름과 연락처를 입력해 주세요.":"Please enter your name and phone number.","개인정보 수집·이용 동의에 체크해 주세요.":"Please tick the consent box for personal information.","보내는 중…":"Sending…","접수되었습니다. 담당자가 곧 연락드리겠습니다.":"Received. We'll be in touch shortly.","접수하지 못했습니다. 전화 상담을 이용해 주세요.":"We couldn't receive your request. Please call us instead.","교육시설":"Education","기업 오피스":"Corporate office","다이닝 가구":"Dining furniture","라운지 가구 납품":"Lounge furniture supply","라운지 체어":"Lounge chair","리빙 가구":"Living furniture","리클라이너":"Recliner","리테일":"Retail","리테일 · 굿즈숍":"Retail · Goods shop","베이커리 카페":"Bakery café","뷰티":"Beauty","브랜드 공간":"Brand space","빌트인 워드로브":"Built-in wardrobe","상업공간":"Commercial","선반":"Shelving","신발장":"Shoe cabinet","오리지널 라인":"Original line","워드로브":"Wardrobe","웨딩홀":"Wedding Hall","의료":"Medical","익스피리언스":"Experience","전시":"Exhibition","주방 시스템":"Kitchen system","주방 캐비닛":"Kitchen cabinet","체어":"Chair","침실 수납":"Bedroom storage","카페":"Café","커뮤니티":"Community","컨벤션":"Convention","키친 아일랜드":"Kitchen island","팝업":"Pop-up","호텔":"Hotel","호텔·숙박":"Hotel · Stay","홍보관":"Sales gallery","토미스 웨어가든 웨딩홀":"Tomis Weargarden Wedding Hall","체류형 쉼턴 (농막)":"Stay-in Rural Retreat (Farm Cabin)","경산 카페":"Gyeongsan Café","커뮤니티 센터":"Community Center","서초동 하우스":"Seocho-dong House","여수 베리아일랜드":"Yeosu Berry Island","성수동 옷가게":"Seongsu-dong Apparel Store","효성인포메이션시스템":"Hyosung Information Systems","성남 REVER 카페":"Seongnam REVER Café","효성그룹":"Hyosung Group","호텔VA":"Hotel VA","하루미용실":"Haru Hair Salon","헬로우버디 애견":"Hello Buddy Pet Shop","오산카페":"Osan Café","향수매장":"Perfume Store","레스토랑":"Restaurant","신사동유치원":"Sinsa-dong Kindergarten","컨벤션홀":"Convention Hall","애견카페":"Dog Café","부산호스텔":"Busan Hostel","더샵":"The Sharp Residence","더퀴즈성형외과":"The Quiz Plastic Surgery","몰랑체카페":"Mollangche Café","성남공유오피스":"Seongnam Shared Office","PH서초동":"PH Seocho-dong","서초동":"Seocho-dong Residence","서초홍보관":"Seocho Sales Gallery","시유카페":"Siyu Café","창원공유오피스":"Changwon Shared Office","오산홍보관":"Osan Sales Gallery","부산호텔":"Busan Hotel","치과병원":"Dental Clinic","위너스뷰":"Winners View","수성SK리더스뷰":"Suseong SK Leaders View","대구코오롱하늘채":"Daegu Kolon Haneulchae","요우정":"Youjeong","이공파크빌":"Igong Park Ville","안녕동":"Annyeong-dong Residence","행궁동굿즈":"Haenggung-dong Goods Shop","코너 선반":"Corner Shelf","호텔 라운지":"Hotel Lounge","홈 식탁":"Home Dining Table","DDC 라운지 체어":"DDC Lounge Chair","싱크 캐비닛":"Sink Cabinet","메탈 실버 싱크대":"Metal Silver Sink","컴포트 라운지 체어":"Comfort Lounge Chair","브라이덜 캐비닛":"Bridal Cabinet","에그 스위블 체어":"Egg Swivel Chair","화이트 키친 시스템":"White Kitchen System","다크 모던 키친":"Dark Modern Kitchen","슬라이딩 워드로브":"Sliding Wardrobe","현관 슈즈 캐비닛":"Entryway Shoe Cabinet","월넛 빌트인 워드로브":"Walnut Built-in Wardrobe","부클레 리클라이너 세트":"Bouclé Recliner Set","프리미엄 슈즈 캐비닛":"Premium Shoe Cabinet","아트 & 프로덕트 전시":"Art & Product Exhibition","럭셔리 브랜드 쇼룸":"Luxury Brand Showroom","럭셔리 패션 리테일":"Luxury Fashion Retail","브랜드 익스피리언스 센터":"Brand Experience Center","와인 테이스팅 룸":"Wine Tasting Room"};
+let LANG=document.documentElement.hasAttribute('data-lang-pending')?'en':'ko';
+const T=v=>{if(LANG!=='en'||v==null)return v;const k=String(v).trim();return EN[k]||v;};
+
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+/* ---------- 방문 기록 ---------- */
+const trackEv=(k,l)=>{try{if(location.protocol!=='https:'&&location.hostname!=='127.0.0.1'&&location.hostname!=='localhost')return;
+  const q=new URLSearchParams(location.search);
+  fetch((window.API_ORIGIN||'')+'/api/track',{method:'POST',keepalive:true,headers:{'Content-Type':'application/json','X-Requested-With':'dagaon'},
+    body:JSON.stringify({k,l:l||'',p:location.pathname+(k==='pf'?'#portfolio':''),r:document.referrer||'',u:q.get('utm_source')||(/KAKAOTALK/i.test(navigator.userAgent)?'kakaotalk':'')})}).catch(()=>{});}catch(e){}};
+if(!/claude\.ai|claudeusercontent/.test(location.hostname)) trackEv('pv');
+
+/* ---------- 사진 보호 ---------- */
+document.addEventListener('contextmenu',e=>{if(!e.target.closest('input,textarea,select,[contenteditable]'))e.preventDefault();},{capture:true});
+document.addEventListener('dragstart',e=>{if(e.target.tagName==='IMG'||e.target.closest('picture,.ph,.lbf'))e.preventDefault();},{capture:true});
+document.addEventListener('keydown',e=>{const k=(e.key||'').toLowerCase();if((e.ctrlKey||e.metaKey)&&(k==='s'||k==='u'))e.preventDefault();},{capture:true});
+
+/* ---------- 부드러운 스크롤 (PC만) ---------- */
+let lenis=null;
+/* PC 부드러운 휠 스크롤 (자체 구현)
+   예전 방식은 휠을 한 칸 굴릴 때마다 속도가 '확' 올랐다 줄어드는 톱니 모양이라 뚝뚝 끊겨 보였음.
+   → 두 단계로 부드럽게 따라가게 해서 속도가 끊김 없이 이어짐(미끄러지는 길이·느낌은 이전과 비슷하게). */
+if(!touch&&!reduce){lenis=(()=>{
+  let target=scrollY,mid=scrollY,pos=scrollY,stopped=false,running=false,anim=null,lastSet=-1,last=0;
+  const L1=12,L2=12;const maxY=()=>Math.max(0,document.documentElement.scrollHeight-innerHeight);const cl=v=>Math.max(0,Math.min(maxY(),v));
+  const ease=t=>Math.min(1,1.001-Math.pow(2,-10*t));
+  const sync=()=>{target=mid=pos=scrollY;};
+  function frame(now){const dt=Math.min(.05,Math.max(.001,(now-(last||now-16.7))/1000));last=now;
+    if(anim){const k=Math.min(1,(now-anim.t0)/anim.d);pos=anim.from+(anim.to-anim.from)*ease(k);target=mid=pos;if(k>=1)anim=null;}
+    else{mid+=(target-mid)*(1-Math.exp(-L1*dt));pos+=(mid-pos)*(1-Math.exp(-L2*dt));if(Math.abs(target-pos)<.25&&Math.abs(target-mid)<.25)pos=mid=target;}
+    const y=Math.round(pos*10)/10;if(y!==lastSet){lastSet=y;window.scrollTo(0,y);}
+    if(anim||pos!==target){requestAnimationFrame(frame);}else{running=false;last=0;}}
+  const kick=()=>{if(!running){running=true;last=0;requestAnimationFrame(frame);}};
+  addEventListener('wheel',e=>{if(stopped||e.ctrlKey||e.defaultPrevented)return;if(e.target&&e.target.closest&&e.target.closest('[data-lenis-prevent]'))return;
+    let d=e.deltaY;if(e.deltaMode===1)d*=40;else if(e.deltaMode===2)d*=innerHeight;if(!d)return;e.preventDefault();anim=null;
+    if(!running)sync();target=cl(target+d);kick();},{passive:false});
+  /* 스크롤바 끌기·키보드로 움직이면 그 위치에 맞춰 멈춤 */
+  addEventListener('scroll',()=>{if(!running||(lastSet>=0&&Math.abs(scrollY-lastSet)>3&&!anim)){if(running&&!anim){running=false;}sync();}},{passive:true});
+  return {scrollTo(t,o){const y=typeof t==='number'?t:t.getBoundingClientRect().top+scrollY;anim={from:scrollY,to:cl(y),t0:performance.now(),d:((o&&o.duration)||1.2)*1000};pos=scrollY;kick();},
+    stop(){stopped=true;anim=null;sync();},start(){stopped=false;},on(){}};})();}
+const goTo=t=>{const el=typeof t==='string'?(t==='#top'?0:$(t)):t;if(el==null)return;
+  if(lenis)lenis.scrollTo(el,{duration:1.4});else{const y=typeof el==='number'?el:el.getBoundingClientRect().top+scrollY;scrollTo({top:y,behavior:reduce?'auto':'smooth'});}};
+
+/* ---------- 포트폴리오 데이터 ---------- */
+const PF=[["DDC","토미스 웨어가든 웨딩홀","웨딩홀",1,["e80ff1c9dd1225d4","58bd10f64569b9aa","34c5490981c892c5","1b89519f8a9d9cbe","b1a83d11a1bdfed1","d2a77dd18498b395","c573e81319afeb9d","9cfbf6d035f2fa2e","0625a3edb4b41c1c"]],["DDC","체류형 쉼턴 (농막)","주거",0,["bf0519415dcd0baa","5fd8d31e91904480","2c0644623d5d7648","7e9be4cef5f29d53","6a066f01bfdfe8e8","0fed084851cd8c37","25a5108175a6e8c6","cae7ebebf4b0d5f4","75f744cb3f652012"]],["DDC","경산 카페","카페",0,["c5635d8b43d4e86c","c1d1d78e0e62b60a","7ec856a84cf661a9","247503bcf6f3c681","98bede009fe3d7a7","ba7fb39ce22bc75f"]],["DDC","커뮤니티 센터","상업공간",0,["1d5d331aa352b746","8291fd56afa90199","c14732e975bcb23e","f0bd3dac95f1c56d","950e506b74b7eab6","1287c5616c71c995","63741246959d4c3f"]],["DDC","서초동 하우스","주거",0,["ee22fa418604deb1","531705586f799c09","3cdf2aaf48fdf5dc","e235f68f74fa2371","4a26facab19acb2c","20c68416b6ae5554","2c3001f695953570","7d80d32c2d14ab5f","98442e3f5c167803","b52b79514f965b88"]],["DDC","여수 베리아일랜드","베이커리 카페",1,["72f5fb015dbd30ff","e7a08478b38fd2a5","206adc74653b529d","28a83e209430568f","df221f584dad2f76","fa6321ce9004f204","d7b6217e49c24fa4","5c0d31f9dcccaae0","490fe2f3ad533ab5"]],["DDC","성수동 옷가게","상업공간",0,["8ab829f723fe38ed","a01c6bd19a803484","dc68b47c8506ff41","157c635f8bff3058","5a40ecc4d54f9e15","bf5df3d5e925c877","0cad868ef4435e53"]],["DDC","효성인포메이션시스템","상업공간",0,["34f82b21711f7acf","3f1237a8a13a461e","2460a43b1b1f1c25","9cd07d7dc7e88e51","218dc338726a4163","5cd0ddab78c54003","69abd340599bee8b","fd8d8b7909fe4161","80855ba003ab43df","7bd8bce2845463a4","832b43c363368693","69c430f7e04ad21a"]],["DDC","성남 REVER 카페","상업공간",0,["308ce4c3b6d1fabf","0e36833754ed5096","06c422b932d1cbdc","98568e754023541c","4e18f467b21dde30","0986ef17e834e01d","d9cf2022c5d684eb","0deaf71bdf600573","5a1f617a85d97617","758b1d9f78f03a07","d0006b1424cf9929","4c61d692c98dca79","705877b6611f9d7a","66fe9b24d25dae44","48f24a749f6c4b88"]],["DDC","효성그룹","기업 오피스",1,["a33d6c54ec6e7d0f","4fc1e8b125b84b22","a0eee19b855fc37d","7943d4d50ca5f979","a0fd8dd6d1478fa0"]],["DDC","커뮤니티 센터","커뮤니티",0,["b32e472c9b79b646","437059aee9a75a19","3f8b5df0ed7d06d3","143447fa3bd6c0ce","7c9dd06b05f65304","f3aaebcc61c87d18","cf7f952fa5336f82"]],["DDC","호텔VA","호텔",1,["8adab88bd36302c7","b4dca821a7abc7a7","a77c7b65e695fd86","9723d892091d4d80","e75f6dd4b5d84646"]],["DDC","하루미용실","뷰티",0,["8d6b539a1ca4a569","fd9bad93940243e4"]],["DDC","헬로우버디 애견","상업공간",0,["a150002e4ff9ebad","6ecc8a4e6892af71","d233547aa9b54ca3","f2600264ba63bcb4"]],["DDC","오산카페","상업공간",0,["333c4fb464cc5542","9c7f918971799696","f32649df50683cd3","234a5621e4da2f1f"]],["DDC","향수매장","리테일",1,["db11b5dcac22bc27"]],["DDC","레스토랑","F&B",1,["32bd540bdc757efc","3a40ece44d507212","f21f723d1549f73f","68d88dd92909e0af"]],["DDC","신사동유치원","교육시설",0,["9f09ca5db9b0db2d","4f728e689b87ee42","9b35c76fd71a703b"]],["DDC","컨벤션홀","컨벤션",1,["d729334beafe3827","01f4522ab581f8da","a56fcc20cff53e03","05a507f5e6dfea3f","d9738ae358aa4ecc"]],["DDC","애견카페","상업공간",0,["cfd9c6f7d63e75bd","fc7f8be943147885","8c4e4faf8cb5659c","b2f9344534557676"]],["DDC","부산호스텔","호텔·숙박",0,["c7fb8e7fe9679d6d","092a633213c9156e","82c27feebcb09be4","228ad97c99c0c23e","428e1354e48abbb0"]],["DDC","더샵","주거",0,["29f7bc1b4a3a9555","298d15867ca41c6d","e7df6c2fbbceebbf","1f46ce5ec71b936c"]],["DDC","더퀴즈성형외과","의료",0,["1a4b22fa38e2368c","75b569929bd4ceaf","dfc0d7f58b9b1e59"]],["DDC","몰랑체카페","상업공간",0,["4b247f085d714b30","862a10ac310087b6","3980a73b428447e0"]],["DDC","성남공유오피스","상업공간",0,["b3fc02147bb7bfd4","5d228ec4000be6f4","28ceb16d6ba1d5ec"]],["DDC","PH서초동","주거",0,["8360e52fa886a6f5","f7d2008aa9e7e313","dc0dc7055855e653","552491e8fc8e421f","82823345fa7e3ed3","df40d87c4e475ca9","2227d6d8280876db"]],["DDC","서초동","주거",0,["90daf2146a4b2a9d","eaa22706b697b9af","44272ff5a5a7915f","17349376275ce2d2"]],["DDC","서초홍보관","홍보관",1,["1e467ba80b9d4f42","98041b8c74031135","d0083683a4df7311","9440d794adff8135","721a96ed64ad303a"]],["DDC","시유카페","상업공간",0,["d4b968c30d1532e4","39aa102c382c10a4","98899d1c51c91339"]],["DDC","창원공유오피스","상업공간",0,["a65283d103d4c9fb","3e7aed273dbcd737","9c06ea814c6b7726"]],["DDC","오산홍보관","홍보관",0,["9b76e7383b387f3c","3058c5f397049c69","b57999a88c64dceb","00a51b541d7b0f37","cc6342173594289a","1f86865be9414c86"]],["DDC","부산호텔","호텔·숙박",0,["bd1a163e9ae5d80e","d176f42872e38fd1","bbfc6a31a2a4431b","43ffe5c40c043793"]],["DDC","치과병원","의료",0,["95176cbb6360cedb","520c1a9dc886f4ed","56b8af9030cf9f93","01df05997d977ac5"]],["DDC","위너스뷰","주거",0,["351b5dc4061cdd2f","c345d131ee6ab8ce","75891ee21123579c"]],["DDC","수성SK리더스뷰","주거",0,["806b52e2b61c4bb8","7a2640e2f8971616","629604752e5fa09e","b8e9f947edf44551"]],["DDC","대구코오롱하늘채","주거",0,["a9365a071414ca1d","76b5565d87b8d7dd","6b8f9e59405911ec","3d20616a3e37b13d","b027e95f766de77f","a28573d08c0234bf"]],["DDC","요우정","상업공간",0,["a4ee40d53d0f0dca","414c4c475113a9f3","b1844f503b5f36f4","ead816afe2d5a0a3","4277895a95b678eb"]],["DDC","이공파크빌","주거",0,["2fb3cfda7996bba1","4fdc7287dce3a4a3","981ca84854dc2a8b"]],["DDC","안녕동","주거",0,["5d9eed92fee2f872","b27f0d2500d5a72f","1be4de8d16adf71d","b20635b64d8ef0f0","315f480f7f724e85"]],["DDC","V","주거",0,["1de6737caebf3bbc","de8f2f66409470f6","d1bd1eba47bfdde5","ce3e73dc4a1e940b","c1c28aeeccdd825c","ff97b86e8905799d"]],["DDC","웨딩홀","웨딩홀",0,["902f98c418ad98cc","0faafbf1b0fe240f","0713a5c39a347898"]],["DDC","행궁동굿즈","리테일 · 굿즈숍",1,["b70bb5c23a6eebc0"]],["DDF","HOUSE","리빙 가구",1,["41c784918199407a","e64626451c5177e3","44f6e792144d7dc3"]],["DDF","코너 선반","선반",0,["d2990c7213ca7b51"]],["DDF","호텔 라운지","라운지 가구 납품",1,["8cd7c1890121bb37"]],["DDF","홈 식탁","다이닝 가구",0,["b7beb56421b4752a","93b23d82eb4e0c35"]],["DDF","DDC 라운지 체어","오리지널 라인",0,["762bde9df5b83484"]],["DDF","싱크 캐비닛","주방 캐비닛",0,["7a16cefd9296fbdf"]],["DDF","메탈 실버 싱크대","주방 시스템",0,["b7b31b44225f636c"]],["DDF","컴포트 라운지 체어","라운지 체어",0,["e08121f7d70b9f0d"]],["DDF","브라이덜 캐비닛","침실 수납",0,["36a94d44fa167870"]],["DDF","에그 스위블 체어","체어",1,["6232ad6314490081"]],["DDF","화이트 키친 시스템","주방 시스템",0,["b4826289820bb54b"]],["DDF","다크 모던 키친","키친 아일랜드",0,["46aae2beb10216ad"]],["DDF","슬라이딩 워드로브","워드로브",0,["508422193127c8de"]],["DDF","현관 슈즈 캐비닛","신발장",0,["d7e29b80bded498e"]],["DDF","월넛 빌트인 워드로브","빌트인 워드로브",0,["31169e6cdfe08436"]],["DDF","부클레 리클라이너 세트","리클라이너",0,["b0dc14d5cfa2f068"]],["DDF","프리미엄 슈즈 캐비닛","신발장",0,["4c186513158fc4d5"]],["DDP","아트 & 프로덕트 전시","전시",1,["d233f86ef2dc216c"]],["DDP","럭셔리 브랜드 쇼룸","브랜드 쇼룸",1,["69c0ee31b4cc464f"]],["DDP","럭셔리 패션 리테일","리테일 VMD",0,["76e06d203a4623f2"]],["DDP","팝업 스토어","팝업",0,["1a867a78d29b7de3"]],["DDP","브랜드 익스피리언스 센터","익스피리언스",1,["4f7b67dc3305e033"]],["DDP","와인 테이스팅 룸","브랜드 공간",0,["c446b5877dceecdb"]]];
+let DATA=PF.map((p,i)=>{const im=p[4].map(h=>({url:'seed/pf/'+h+'.webp',thumb:'seed/pf/'+h+'_t.webp'}));return {id:'f'+i,division:p[0],title:p[1],category:p[2],description:'',featured:!!p[3],cover:im[0],images:im};});
+
+/* ---------- 뒤로 가기 (메뉴 · 전체 포트폴리오 · 사진 크게 보기 · 섹션 이동) ---------- */
+try{history.scrollRestoration='manual';}catch(e){}
+const NAV=[];const navTop=()=>NAV[NAV.length-1];
+const saveY=()=>{try{history.replaceState(Object.assign({},history.state,{y:scrollY,d:NAV.length}),'');}catch(e){}};
+function navOpen(name,close,url){const top=navTop();saveY();
+  if(top&&top.name==='menu'&&name!=='menu'){NAV.pop();top.close();NAV.push({name,close});history.replaceState({d:NAV.length,layer:name},'',url||location.href);return;}
+  NAV.push({name,close});history.pushState({d:NAV.length,layer:name},'',url||location.href);}
+function navClose(name){const t=navTop();if(t&&t.name===name){history.back();return true;}return false;}
+function navSection(h){saveY();history.pushState({d:NAV.length,sec:h},'',h);}
+const lockState=()=>{const any=NAV.length>0||$('#pfall').classList.contains('on')||$('#lb').classList.contains('on');if(lenis)any&&!$('#menu').classList.contains('on')?lenis.stop():lenis.start();document.documentElement.style.overflow=($('#pfall').classList.contains('on')||$('#lb').classList.contains('on'))?'hidden':'';};
+
+/* 메뉴 */
+const menu=$('#menu'),scrim=$('#scrim'),menuBtn=$('#menuBtn');
+function setMenu(on,nav){if(on===menu.classList.contains('on'))return;if(!on&&!nav&&navClose('menu'))return;if(on&&!nav)navOpen('menu',()=>setMenu(false,true));
+  menu.classList.toggle('on',on);scrim.classList.toggle('on',on);menu.setAttribute('aria-hidden',!on);menuBtn.setAttribute('aria-expanded',on);menuBtn.textContent=on?'CLOSE':'MENU';lockState();}
+menuBtn.onclick=()=>setMenu(!menu.classList.contains('on'));
+scrim.onclick=()=>setMenu(false);
+
+/* 섹션 링크 */
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a||a.hasAttribute('data-pf-open'))return;const h=a.getAttribute('href');if(h.length<2)return;e.preventDefault();
+  const t=navTop();if(t&&t.name==='menu'){NAV.pop();t.close();history.replaceState({d:NAV.length,sec:h},'',h);}else navSection(h);
+  goTo(h);});
+
+/* 사진 크게 보기 */
+const lb=$('#lb');
+function setLb(on,srcs,cap,nav,cls){if(!on&&!lb.classList.contains('on'))return;if(!on&&!nav&&navClose('lb'))return;if(on&&!nav&&!lb.classList.contains('on'))navOpen('lb',()=>setLb(false,null,null,true));
+  if(on){$('#lbIn').innerHTML=(cap?'<div class="lb-cap">'+cap+'</div>':'')+srcs.map(s=>'<span class="lbf'+(cls?' '+cls:'')+'"><img src="'+esc(s)+'" alt="" draggable="false" decoding="async"></span>').join('');$('#lbIn').scrollTop=0;}
+  lb.classList.toggle('on',on);lockState();}
+$$('[data-close-lb]').forEach(b=>b.onclick=()=>setLb(false));
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.id==='lbIn')setLb(false)});
+$$('[data-cert]').forEach(b=>b.onclick=()=>setLb(true,b.dataset.cert.split(','),'<span class="lab">License</span><h3>'+esc(b.querySelector('b').textContent)+'</h3>',false,'cert'));
+function openProject(p){if(!p)return;try{trackEv('project',p.title);}catch(e){}
+  setLb(true,p.images.map(i=>i.url),'<span class="lab">'+esc(p.division)+(p.category?' · '+esc(T(p.category)):'')+(p.location?' · '+esc(p.location):'')+(p.year?' · '+esc(p.year):'')+(LANG==='en'?' · '+p.images.length+' photos':' · 사진 '+p.images.length+'장')+'</span><h3>'+esc(T(p.title))+'</h3>'+(p.description?'<p style="margin:0;color:rgba(244,243,239,.75)">'+esc(p.description).replace(/\n/g,'<br>')+'</p>':''));}
+
+/* 전체 포트폴리오 */
+const pf=$('#pfall'),grid=$('#pfGrid'),fbox=$('#pfFilters'),cbox=$('#pfCats'),pfBody=$('#pfBody');
+let pfDiv='all',pfCat='all';
+const DIVS=[['all','All'],['ddc','DDC 디자인·설계'],['ddf','DDF 가구'],['ddp','DDP 디스플레이']];
+const inDiv=p=>pfDiv==='all'||p.division.toLowerCase()===pfDiv;
+function renderFilters(){fbox.innerHTML=DIVS.map(([k,l])=>{const n=k==='all'?DATA.length:DATA.filter(p=>p.division.toLowerCase()===k).length;return '<button type="button" data-k="'+k+'" class="'+(k===pfDiv?'on':'')+'">'+T(l)+'<small>'+n+'</small></button>';}).join('');
+  const cats=[...new Set(DATA.filter(inDiv).map(p=>(p.category||'').trim()).filter(Boolean))];if(pfCat!=='all'&&!cats.includes(pfCat))pfCat='all';
+  cbox.innerHTML=cats.length>1?['all',...cats].map(c=>'<button type="button" data-c="'+esc(c)+'" class="'+(c===pfCat?'on':'')+'">'+(c==='all'?T('전체 분야'):esc(T(c)))+'</button>').join(''):'';}
+function renderGrid(){const list=DATA.filter(p=>inDiv(p)&&(pfCat==='all'||(p.category||'').trim()===pfCat));$('#pfCount').textContent='('+list.length+')';
+  grid.innerHTML=list.length?list.map(p=>'<button type="button" class="pf-card" data-i="'+DATA.indexOf(p)+'"><div class="ph"><img src="'+esc(p.cover.thumb)+'" alt="" loading="lazy" decoding="async" onerror="this.classList.add(\'err\')"></div><div class="cp"><b>'+esc(T(p.title))+'</b><span class="lab">'+esc(p.division)+(p.images.length>1?' · '+p.images.length+'P':'')+'</span></div><div class="lab" style="color:var(--mute);margin-top:4px;text-transform:none;letter-spacing:0">'+esc([T(p.category),p.location,p.year].filter(Boolean).join(' · '))+'</div></button>').join(''):'<p class="pf-empty">'+T('등록된 프로젝트가 없습니다.')+'</p>';}
+const renderPf=()=>{renderFilters();renderGrid();};
+fbox.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;pfDiv=b.dataset.k;pfCat='all';renderPf();pfBody.scrollTop=0;});
+cbox.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;pfCat=b.dataset.c;renderPf();});
+grid.addEventListener('click',e=>{const c=e.target.closest('.pf-card');if(c)openProject(DATA[+c.dataset.i]);});
+function setPf(on,div,nav){
+  if(on===pf.classList.contains('on')){if(on&&div){pfDiv=div;pfCat='all';renderPf();}return;}
+  if(!on&&!nav&&navClose('pf'))return;
+  if(on){pfDiv=div||'all';pfCat='all';renderPf();pfBody.scrollTop=0;trackEv('pf');if(!nav)navOpen('pf',()=>setPf(false,null,true),location.pathname+location.search+'#portfolio');}
+  else if(location.hash==='#portfolio'){try{history.replaceState(history.state,'',location.pathname+location.search);}catch(e){}}
+  pf.classList.toggle('on',on);pf.setAttribute('aria-hidden',!on);lockState();}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-pf-open]');if(!b)return;e.preventDefault();setPf(true,b.dataset.pfOpen);});
+$$('[data-pf-close]').forEach(b=>b.onclick=()=>setPf(false));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&navTop())history.back();});
+addEventListener('popstate',e=>{const st=e.state||{},d=st.d||0;let closed=false;
+  while(NAV.length>d){closed=true;NAV.pop().close();}
+  if(NAV.length<d){if(st.layer==='pf'){NAV.push({name:'pf',close:()=>setPf(false,null,true)});setPf(true,'all',true);}else{try{history.replaceState(Object.assign({},st,{d:NAV.length,layer:null}),'');}catch(err){}}return;}
+  if(closed)return;
+  if(typeof st.y==='number'){if(lenis)lenis.scrollTo(st.y,{duration:1});else scrollTo({top:st.y,behavior:'smooth'});}
+  else if(!location.hash)goTo('#top');});
+if(location.hash==='#portfolio')setTimeout(()=>{history.replaceState({d:0,y:0},'',location.pathname+location.search);setPf(true,'all');},400);
+
+/* ---------- HERO 슬라이드 ---------- */
+const slides=$$('.slide'),hBar=$('#hBar'),hNum=$('#hNum'),DUR=6000;let hi=0,hT=null,heroVis=true,mode3d=false,heroK=0,heroOn=true,camK=-1;
+function runBar(){hBar.classList.remove('run');void hBar.offsetWidth;hBar.style.setProperty('--dur',DUR+'ms');hBar.classList.add('run');}
+function show(n){const old=slides[hi];n=(n+slides.length)%slides.length;if(n===hi)return;
+  const nx=slides[n];const im=nx.querySelector('img');if(!mode3d&&im.loading==='lazy')im.loading='eager';
+  old.classList.add('out');old.classList.remove('on');nx.classList.remove('out');nx.classList.add('on');
+  setTimeout(()=>old.classList.remove('out'),1500);hi=n;hNum.textContent=String(n+1).padStart(2,'0');if(!mode3d)runBar();}
+function loop(){clearTimeout(hT);if(reduce)return;hT=setTimeout(()=>{if(heroVis&&!document.hidden)show(hi+1);loop();},DUR);}
+setTimeout(()=>{if(!mode3d)slides.slice(1).forEach(s=>{const i=s.querySelector('img');i.loading='eager';});},2500);
+runBar();loop();
+new IntersectionObserver(es=>es.forEach(e=>{heroVis=e.isIntersecting;}),{threshold:.2}).observe($('#hero'));
+/* 3D 공간 시작 (WebGL이 되는 기기만, 안 되면 사진 슬라이드 그대로) */
+/* 실사 영상 장면: 스크롤하면 카메라가 집 밖에서 안으로 들어감 (프레임을 캔버스에 그림) */
+/* 첫 화면: 스크롤하면 실제 영상이 재생되며 따라감 (그림 넘기기 X → 영상 원래의 부드러움 그대로)
+   - 내리면 정방향 영상이, 올리면 역방향(거꾸로 만든) 영상이 재생됨
+   - 스크롤한 만큼 따라잡을 때까지 재생 속도를 자동 조절, 따라잡으면 멈춤
+   - 자동재생이 막힌 기기(아이폰 저전력 모드 등)는 영상 위치를 직접 옮기는 방식으로 대체 */
+function startVid(){const V=window.VID,F=$('#hvF'),B=$('#hvB');if(!V||!F||!F.canPlayType||!F.canPlayType('video/mp4')){hero.classList.remove('is3d');loop();return;}
+  const mob=innerWidth<=760&&innerHeight>innerWidth;
+  let D=V.dur,act=F,busy=false,bReady=false,scrub=false,lastRate=0,lastSt=-1,lastK=-1,loaded=false,lastSwap=0;
+  const hint=$('#hint'),hTxt=hint&&hint.firstChild,still=$('#hStill');
+  const setTxt=t=>{if(hTxt&&hTxt.nodeType===3&&hTxt.nodeValue!==t)hTxt.nodeValue=t;};
+  F.muted=true;B.muted=true;
+  /* 영상을 통째로 메모리에 받아서 재생(blob) → 서버 설정과 상관없이 앞뒤 이동이 즉시 됨 + 정확한 받기 진행률 */
+  /* 큰 영상은 두 조각(.part1/.part2, 앞 8바이트 표식 DGPART01)으로 나눠 받아 표식을 떼고 메모리에서 다시 합침(합친 내용은 원본과 똑같음) */
+  const grab=(url,onp)=>{const n=(V.parts||{})[url]||0,urls=n?Array.from({length:n},(_,i)=>url+'.part'+(i+1)):[url];
+    return Promise.all(urls.map(u=>fetch(u).then(r=>{if(!r.ok)throw 0;return r;}))).then(rs=>{const tot=rs.reduce((a,r)=>a+(+r.headers.get('content-length')||0),0);let got=0;
+      return Promise.all(rs.map(r=>{if(!r.body||!tot||!window.ReadableStream)return r.blob();const rd=r.body.getReader(),ch=[];
+        const pump=()=>rd.read().then(({done,value})=>{if(done)return new Blob(ch);ch.push(value);got+=value.length;onp&&onp(Math.min(1,got/tot));return pump();});return pump();}));})
+    .then(bs=>URL.createObjectURL(new Blob(n?bs.map(b=>b.slice(8)):bs,{type:'video/mp4'})));};
+  F.addEventListener('loadedmetadata',()=>{if(F.duration&&isFinite(F.duration))D=F.duration;});
+  F.addEventListener('loadeddata',()=>{F.classList.add('on');},{once:true});
+  B.addEventListener('loadeddata',()=>{bReady=true;},{once:true});
+  setTxt('Loading 0% ');
+  grab(mob?V.m:V.d,r=>setTxt('Loading '+Math.round(r*100)+'% ')).then(u=>{F.src=u;F.load();loaded=true;setTxt('Scroll to enter');
+      return grab(mob?V.mr:V.dr);}).then(u=>{B.src=u;B.preload='auto';B.load();})
+    .catch(()=>{if(!loaded){const u=mob?V.m:V.d;F.src=((V.parts||{})[u]&&window.API_ORIGIN?window.API_ORIGIN+'/':'')+u;F.load();loaded=true;setTxt('Scroll to enter');}});
+  mode3d=true;clearTimeout(hT);hBar.classList.remove('run');hBar.classList.add('prog');hero.classList.add('is3d');
+  const cur=()=>act===F?F.currentTime:Math.max(0,D-B.currentTime);
+  const swap=(to,t)=>{busy=true;act.pause();const from=act;let fin=false;
+    const done=()=>{if(fin)return;fin=true;to.classList.add('on');from.classList.remove('on');act=to;lastRate=0;busy=false;};
+    to.addEventListener('seeked',done,{once:true});to.currentTime=to===F?t:Math.max(0,D-t);setTimeout(done,800);};
+  const play=v=>{const p=v.play();if(p&&p.catch)p.catch(()=>{scrub=true;if(act!==F&&!busy)swap(F,cur());});};
+  /* 부드러운 흐름: 영상 속도에 '관성'을 줌 — 방향을 바꾸면 서서히 멈췄다가 반대로 서서히 출발(탁 튕김 없음), 최고 속도 제한 */
+  let v=0,tPrev=performance.now();const VMAX=mob?2:2.6,ACC=mob?3.2:4.5,DEAD=.12;
+  (function lp(){requestAnimationFrame(lp);const now=performance.now(),dt=Math.min(.05,(now-tPrev)/1000);tPrev=now;
+    if(!heroOn||document.hidden){if(!act.paused)act.pause();v=0;return;}
+    const goal=heroK*D,c=cur(),diff=goal-c;
+    if(!busy){
+      if(scrub){if(act!==F)swap(F,c);else if(Math.abs(diff)>.03&&!F.seeking)F.currentTime=Math.max(0,Math.min(D,c+diff*.25));}
+      else{
+        const vd=Math.abs(diff)<DEAD?0:Math.max(-VMAX,Math.min(VMAX,(diff-Math.sign(diff)*DEAD)*2));
+        const a=(v!==0&&Math.sign(vd)!==Math.sign(v))?ACC*1.5:ACC;
+        v+=Math.max(-a*dt,Math.min(a*dt,vd-v));
+        if(Math.abs(v)<.06&&vd===0){v=0;if(!act.paused)act.pause();}
+        else{const want=v>0?F:B;
+          if(want!==act){
+            if(Math.abs(v)<.35){if(want===B&&!bReady){if(!F.paused)F.pause();if(!F.seeking)F.currentTime=Math.max(0,c+v*dt);}else{if(!act.paused)act.pause();swap(want,c);}}
+            else{v=v>0?.3:-.3;}}
+          else{let r=Math.max(.1,Math.abs(v));r=Math.round(r*16)/16;if(r!==lastRate){act.playbackRate=r;lastRate=r;}if(act.paused)play(act);}}}}
+    const k=Math.min(1,Math.max(0,c/D));const st=k<.2?0:k<.45?1:k<.72?2:3;if(st!==lastSt){show(st);lastSt=st;}
+    if(Math.abs(k-lastK)>.001){lastK=k;hBar.style.transform='scaleX('+k.toFixed(4)+')';hint.style.opacity=k>.03?0:1;if(still)still.style.opacity=(k<.004&&!F.classList.contains('on'))||k<.0015?1:0;}})();
+}
+
+/* ---------- 스크롤 연동 ---------- */
+const top=$('.top'),bk=$('#book'),hero=$('#hero'),stEl=$('.st'),stBg=$('#stBg'),spark=$('#spark'),xp=$('#xp'),xpM=$('#xpM'),xpI=$('#xpI'),xpH=$('#xpH'),xpHead=$('#xpHead'),cap=$('#cap');
+const splitRv=r=>{const words=String(T(r.ko)).trim().split(/\s+/);r.el.innerHTML=words.map(w=>'<span class="rw">'+esc(w)+'</span>').join(' ');r.ws=$$('.rw',r.el);};
+const reveals=$$('[data-reveal]').map(el=>{const r={el,ko:el.textContent.trim(),ws:[]};splitRv(r);return r;});
+let vh=innerHeight,vw=innerWidth;addEventListener('resize',()=>{vw=innerWidth;if(!touch||Math.abs(innerHeight-vh)>140)vh=innerHeight;tick();});
+let ticking=false;
+let xpE=0;
+/* 매거진: PC는 세로 스크롤 → 표지가 가로로 흘러감, 휴대폰은 손가락으로 옆으로 넘김 */
+const mg=$('#magazine'),mgT=$('#mgT'),mgI=$$('.mgi',mgT),mgN=$('#mgN'),mgB=$('#mgB'),mgBg=$('#mgBg'),mgH=$('#mgH');let mgW=0,mgLast=-1;
+let mgC=[];function mgSize(){if(!mg)return;if(vw<=760){mg.style.height='';mgT.style.transform='';return;}mgW=Math.max(0,mgT.scrollWidth-vw);mg.style.height=Math.round(vh+mgW*1.45)+'px';mgC=mgI.map(it=>it.offsetLeft+it.offsetWidth/2);}
+function mgSet(p){const n=Math.min(mgI.length-1,Math.round(p*(mgI.length-1)));if(n!==mgLast){mgLast=n;mgN.textContent=String(n+1).padStart(2,'0');}mgB.style.transform='scaleX('+p.toFixed(3)+')';}
+function mgTick(){if(!mg||vw<=760)return;const r=mg.getBoundingClientRect();if(r.top>vh||r.bottom<0)return;
+  const p=clamp(-r.top/Math.max(1,r.height-vh),0,1),x=p*mgW;mgT.style.transform='translate3d('+(-x).toFixed(1)+'px,0,0)';
+  const c=vw*.6;if(mgC.length!==mgI.length)mgC=mgI.map(it=>it.offsetLeft+it.offsetWidth/2);mgI.forEach((it,i)=>{const d=clamp((mgC[i]-x-c)/vw,-1,1).toFixed(3);if(it._d!==d){it._d=d;it.style.setProperty('--d',d);}});
+  mgBg.style.transform='translate3d('+(-p*30).toFixed(2)+'vw,0,0)';mgH.style.opacity=clamp(1-p*3.2,0,1).toFixed(3);mgSet(p);}
+if(mg){mgT.addEventListener('scroll',()=>{if(vw>760)return;const m=mgT.scrollWidth-mgT.clientWidth;mgSet(m>0?mgT.scrollLeft/m:0);},{passive:true});
+  mgI.forEach(b=>{let sx=0,mv=false;b.addEventListener('pointerdown',e=>{sx=e.clientX;mv=false;});b.addEventListener('pointermove',e=>{if(Math.abs(e.clientX-sx)>8)mv=true;});
+    b.addEventListener('click',e=>{if(mv){e.preventDefault();return;}const im=b.querySelector('img');
+      setLb(true,[im.getAttribute('src')],'<span class="lab">Brand Magazine · '+esc(b.querySelector('.mt .lab').textContent)+'</span><h3>'+esc(b.querySelector('b').textContent)+' — '+esc(b.querySelector('small').textContent)+'</h3><p style="margin:0;color:rgba(244,243,239,.75)">'+esc(b.querySelector('.ds').textContent)+'</p>',false,'mag');});});
+  addEventListener('resize',()=>{mgSize();mgTick();});addEventListener('load',()=>{mgSize();mgTick();});mgSize();}
+function topColor(){const hr=hero.getBoundingClientRect(),sr=stEl.getBoundingClientRect(),xr=xp.getBoundingClientRect(),b=bk.getBoundingClientRect();
+  const gr=mg?mg.getBoundingClientRect():{top:1,bottom:0};const dark=(gr.top<44&&gr.bottom>44)||hr.bottom>44||(sr.top<44&&sr.bottom>44)||(xr.top<44&&xr.bottom>44&&xpE>.86&&vw>760)||(b.top<44&&b.bottom>44);top.classList.toggle('ink',!dark);}
+function tick(){ticking=false;
+  // hero: 3D는 스크롤로 카메라 이동, 사진은 천천히 밀려남
+  const hr=hero.getBoundingClientRect();
+  if(mode3d){heroOn=hr.bottom>0&&hr.top<vh;const p=clamp(-hr.top/(hr.height-vh),0,1);heroK=clamp(p/.94,0,1);
+}
+  else if(hr.bottom>0){const p=clamp(-hr.top/hr.height,0,1);$$('.slide.on .bg',hero).forEach(b=>b.style.transform='translate3d(0,'+(p*18)+'%,0)');}
+  // stats: 사진 시차 + 별 회전
+  const sr=stEl.getBoundingClientRect();if(sr.top<vh&&sr.bottom>0){const p=clamp((vh-sr.top)/(vh+sr.height),0,1);stBg.style.transform='translate3d(0,'+((p-.5)*-12)+'%,0) scale('+(1.12-p*.1)+')';spark.style.transform='rotate('+(p*180)+'deg)';}
+  // expand: 작은 사진이 화면 전체로
+  const xr=xp.getBoundingClientRect(),tot=xr.height-vh;let p=clamp(-xr.top/tot,0,1);const k=clamp((p-.04)/.76,0,1);const e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;
+  const mob=vw<=760;const t0=mob?16:30,b0=mob?16:22,s0=mob?30:28;
+  xpM.style.clipPath='inset('+(t0*(1-e))+'% '+(s0*(1-e))+'% '+(b0*(1-e))+'% '+(s0*(1-e))+'%)';
+  xpI.style.transform='scale('+(1.25-e*.25)+')';
+  xpH.style.opacity=clamp((e-.35)/.4,0,1);xpH.style.transform=(mob?'':'translateY(-50%) ')+'translateY('+((1-clamp((e-.35)/.4,0,1))*30)+'px)';
+  xpHead.style.color=e>.8&&!mob?'#fff':'';
+  // 글자 하나씩 진해짐
+  reveals.forEach(r=>{const b=r.el.getBoundingClientRect();if(b.top>vh||b.bottom<0)return;const q=clamp((vh*.88-b.top)/(b.height+vh*.42),0,1)*r.ws.length;r.ws.forEach((w,i)=>{const o=(.16+.84*clamp(q-i,0,1)).toFixed(2);if(w._o!==o){w._o=o;w.style.opacity=o;}});});
+  // 상단 글자색: 사진 위는 흰색, 밝은 바탕은 검정
+  mgTick();
+  xpE=e;topColor();
+  // 하단 캡슐: 문의 구간에서는 숨김
+  const ct=$('#contact').getBoundingClientRect();cap.classList.toggle('hide',ct.top<vh*.55&&ct.bottom>vh*.3&&!menu.classList.contains('on'));
+}
+const onScroll=()=>{if(!ticking){ticking=true;requestAnimationFrame(tick);}};
+addEventListener('scroll',onScroll,{passive:true});if(lenis)lenis.on('scroll',onScroll);tick();
+try{startVid();tick();}catch(e){mode3d=false;hero.classList.remove('is3d');loop();}
+
+/* 하단 로고 폭 맞춤 */
+const wm=$('.ft .wm');function fitWm(){wm.style.transform='none';const w=wm.getBoundingClientRect().width,cw=wm.parentElement.clientWidth-parseFloat(getComputedStyle(wm.parentElement).paddingLeft)*2;if(w)wm.style.transform='scale('+(cw/w)+')';}
+document.fonts&&document.fonts.ready.then(fitWm);addEventListener('resize',fitWm);fitWm();
+/* 나타나기 */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{rootMargin:'0px 0px -8% 0px'});
+$$('.fu').forEach(el=>io.observe(el));
+
+/* ---------- 사업부: 마우스 따라오는 사진 ---------- */
+const fl=$('#flimg'),flI=$('#flimgI');let mx=0,my=0,fx=0,fy=0,flOn=false;
+$$('.dvr').forEach(r=>{r.addEventListener('click',()=>setPf(true,r.dataset.pf));r.addEventListener('keydown',e=>{if(e.key==='Enter')setPf(true,r.dataset.pf);});
+  if(!touch){r.addEventListener('mouseenter',()=>{flI.src=r.dataset.img;fl.classList.add('on');flOn=true;});r.addEventListener('mouseleave',()=>{fl.classList.remove('on');flOn=false;});}});
+if(!touch){const useTr=window.CSS&&CSS.supports&&CSS.supports('translate','1px 1px');let folOn=false;
+  const fol=()=>{fx+=(mx-fx)*.14;fy+=(my-fy)*.14;const act=flOn||fl.classList.contains('on');
+    if(act){if(useTr)fl.style.translate=fx.toFixed(1)+'px '+fy.toFixed(1)+'px';else{fl.style.left=fx+'px';fl.style.top=fy+'px';}}
+    if(act&&(Math.abs(mx-fx)>.3||Math.abs(my-fy)>.3||flOn)){requestAnimationFrame(fol);}else folOn=false;};
+  const kick=()=>{if(!folOn){folOn=true;requestAnimationFrame(fol);}};
+  addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(flOn)kick();},{passive:true});
+  $$('[data-img]').forEach(r=>r.addEventListener('mouseenter',()=>{fx=mx;fy=my;kick();}));}
+
+/* ---------- 대표 작업 ---------- */
+function pickWorks(){const f=DATA.filter(p=>p.featured&&p.cover);const by=d=>f.filter(p=>p.division===d);const q=[by('DDC'),by('DDF'),by('DDP')];const out=[];
+  for(let i=0;out.length<6&&i<12;i++){const l=q[i%3];if(l.length)out.push(l.shift());}
+  DATA.forEach(p=>{if(out.length<6&&!out.includes(p)&&p.cover)out.push(p);});return out;}
+function renderWorks(){const w=pickWorks();$('#wgrid').innerHTML=w.map(p=>'<button type="button" class="wi rv" data-i="'+DATA.indexOf(p)+'"><div class="ph"><img src="'+esc(p.cover.url)+'" alt="'+esc(T(p.title))+'" loading="lazy" decoding="async"></div><div class="cp"><b>'+esc(T(p.title))+'</b><span class="lab">'+esc(p.division)+(p.category?' · '+esc(T(p.category)):'')+'</span></div></button>').join('');
+  $$('#wgrid .wi').forEach(b=>{b.onclick=()=>openProject(DATA[+b.dataset.i]);io.observe(b);});
+  $('#wkN').textContent='('+DATA.length+')';$('#pjN').textContent=DATA.length;}
+renderWorks();
+fetch((window.API_ORIGIN||'')+'/api/portfolio',{headers:{'Accept':'application/json'}}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.projects)&&j.projects.length){const sig=()=>pickWorks().map(p=>p.title+'|'+p.cover.url).join(',');const before=sig();DATA=j.projects.map(p=>{const fx=o=>{if(o)['url','thumb'].forEach(k=>{if(typeof o[k]==='string'&&o[k].startsWith('/uploads/'))o[k]=(window.API_ORIGIN||'')+o[k];});};fx(p.cover);(p.images||[]).forEach(fx);return p;});if(sig()!==before)renderWorks();if(pf.classList.contains('on'))renderPf();}}).catch(()=>{});
+
+/* ---------- 상담 신청 ---------- */
+$('#iq').addEventListener('submit',async e=>{e.preventDefault();const f=e.target,msg=$('#iqMsg'),btn=$('.send',f);
+  const name=f.name.value.trim(),tel=f.tel.value.trim();
+  if(!name||!tel){msg.style.color='#B4432F';msg.textContent=T('이름과 연락처를 입력해 주세요.');(name?f.tel:f.name).focus();return;}
+  if(!f.agree.checked){msg.style.color='#B4432F';msg.textContent=T('개인정보 수집·이용 동의에 체크해 주세요.');return;}
+  const body={name,phone:tel,type:(f.querySelector('[name=type]:checked')||{}).value||'',message:f.msg.value,website:f.website.value,agree:true,source:LANG==='en'?'홈페이지(영문)':'홈페이지',divisions:$$('.chips input:checked',f).map(i=>i.value)};
+  btn.disabled=true;msg.style.color='';msg.textContent=T('보내는 중…');
+  try{const r=await fetch((window.API_ORIGIN||'')+'/api/inquiry',{method:'POST',headers:{'Content-Type':'application/json','X-Requested-With':'dagaon'},body:JSON.stringify(body)});const j=await r.json().catch(()=>({}));
+    if(!r.ok)throw new Error(j.error||'');f.reset();msg.textContent=T('접수되었습니다. 담당자가 곧 연락드리겠습니다.');}
+  catch(err){msg.style.color='#B4432F';msg.textContent=LANG==='en'?T('접수하지 못했습니다. 전화 상담을 이용해 주세요.'):(err.message||'접수하지 못했습니다. 전화 상담을 이용해 주세요.');}
+  btn.disabled=false;});
+/* ---------- 한국어 / English 전환 ---------- */
+const i18nTxt=new Map(),i18nAt=new Map(),HG=/[\uac00-\ud7a3]/;
+const I18N_SKIP='script,style,#wgrid,#pfGrid,#pfFilters,#pfCats,#lbIn,[data-reveal],#iqMsg';
+function applyLang(){
+  const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+  while((n=w.nextNode())){const pe=n.parentElement;if(!pe||pe.closest(I18N_SKIP))continue;
+    if(!i18nTxt.has(n)){if(!HG.test(n.nodeValue))continue;i18nTxt.set(n,n.nodeValue);}
+    const o=i18nTxt.get(n),k=o.trim();n.nodeValue=LANG==='en'&&EN[k]?o.replace(k,EN[k]):o;}
+  $$('[alt],[aria-label],[placeholder],meta[name="description"],meta[property^="og:"]').forEach(el=>['alt','aria-label','placeholder','content'].forEach(a=>{
+    if(!el.hasAttribute(a))return;let m=i18nAt.get(el);if(!m){m={};i18nAt.set(el,m);}
+    if(!(a in m)){const v=el.getAttribute(a);if(!HG.test(v))return;m[a]=v;}
+    el.setAttribute(a,LANG==='en'&&EN[m[a]]?EN[m[a]]:m[a]);}));
+  document.title=LANG==='en'?'DAGAON GROUP | Brand Space Design Group':'다가온 그룹 | Brand Space Design Group';
+  document.documentElement.lang=LANG;
+  $$('.lang [data-lang]').forEach(b=>b.setAttribute('aria-current',b.dataset.lang===LANG?'true':'false'));
+  const safe=f=>{try{f();}catch(e){}};
+  safe(()=>reveals.forEach(splitRv));safe(renderWorks);safe(()=>{if(pf.classList.contains('on'))renderPf();});
+  safe(()=>{const im=$('#iqMsg');if(im)im.textContent='';});
+  safe(fitWm);safe(tick);
+  document.documentElement.removeAttribute('data-lang-pending');}
+function setLang(l){if(l!=='en')l='ko';try{localStorage.setItem('dg_lang',l);}catch(e){}if(l===LANG)return;LANG=l;applyLang();
+  try{const u=new URL(location.href);if(l==='en')u.searchParams.set('lang','en');else u.searchParams.delete('lang');history.replaceState(history.state,'',u.pathname+u.search+u.hash);}catch(e){}}
+/* 언어 버튼: 화면 안에서 바로 바꾸고, 어떤 이유로든 실패하면 해당 언어 주소로 새로 불러옴 */
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('.lang [data-lang]');if(!b)return;e.preventDefault();const l=b.dataset.lang==='en'?'en':'ko';
+  try{setLang(l);if(document.documentElement.lang!==l)throw 0;}catch(err){try{localStorage.setItem('dg_lang',l);}catch(_){}location.href=location.pathname+'?lang='+l;}});
+try{const q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='ko')localStorage.setItem('dg_lang',q);}catch(e){}
+applyLang();
+})();
+</script>
+</body>
+</html>
